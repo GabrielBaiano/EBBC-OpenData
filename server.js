@@ -523,27 +523,52 @@ function findArticleByDoi(reqDoi) {
 }
 
 /**
- * GET /api/articles/doi/*
- * Matches raw, unencoded DOIs with slashes (e.g. /api/articles/doi/https://doi.org/10.22477.111)
+ * GET /api/articles/doi/* (any sub-path)
+ * Matches raw, unencoded DOIs with slashes
+ * (e.g. /api/articles/doi/https://doi.org/10.22477/ix.ebbc.260)
+ * Uses a query-param fallback as well:
+ * /api/articles/doi?value=https://doi.org/10.22477/ix.ebbc.260
  */
-app.get(/^\/api\/articles\/doi\/(.+)$/, (req, res) => {
-  const reqDoi = req.params[0];
+app.use('/api/articles/doi', (req, res, next) => {
+  // Grab everything after /api/articles/doi/ from the URL path
+  let rawParam = req.path.replace(/^\//, ''); // strip leading slash
+
+  // Also accept ?value= for cases where slashes can't be passed in path
+  if (!rawParam && req.query.value) {
+    rawParam = req.query.value;
+  }
+
+  if (!rawParam) return next();
+
+  let reqDoi;
+  try {
+    reqDoi = decodeURIComponent(rawParam);
+  } catch {
+    reqDoi = rawParam;
+  }
+
   const article = findArticleByDoi(reqDoi);
   if (!article) {
-    return res.status(404).json({ error: `Article with DOI or title match '${reqDoi}' not found.` });
+    return res.status(404).json({ error: `Article with DOI '${reqDoi}' not found.` });
   }
   res.json(article);
 });
 
 /**
  * GET /api/articles/:doi
- * Matches encoded DOIs (e.g. /api/articles/https%3A%2F%2Fdoi.org%2F10.22477.111) or simple path params
+ * Matches percent-encoded DOIs (single path segment, no raw slashes)
+ * e.g. /api/articles/https%3A%2F%2Fdoi.org%2F10.22477%2Fix.ebbc.260
  */
 app.get('/api/articles/:doi', (req, res) => {
-  const reqDoi = req.params.doi;
+  let reqDoi;
+  try {
+    reqDoi = decodeURIComponent(req.params.doi);
+  } catch {
+    reqDoi = req.params.doi;
+  }
   const article = findArticleByDoi(reqDoi);
   if (!article) {
-    return res.status(404).json({ error: `Article with DOI or title match '${reqDoi}' not found.` });
+    return res.status(404).json({ error: `Article with DOI '${reqDoi}' not found.` });
   }
   res.json(article);
 });
