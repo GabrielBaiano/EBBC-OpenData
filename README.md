@@ -1,5 +1,8 @@
 # 📊 EBBC OpenData — Portal & API Pública de Anais
 
+[![DOI](https://zenodo.org/badge/1271350784.svg)](https://doi.org/10.5281/zenodo.20722056)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github)](https://github.com/GabrielBaiano/EBBC-OpenData)
+
 O **EBBC OpenData** é uma plataforma e API científica pública projetada para consolidar, analisar e exportar os metadados bibliométricos e classificações metodológicas de todas as edições históricas viáveis do **Encontro Brasileiro de Bibliometria e Cientometria (EBBC)**, cobrindo o período de **2012 a 2024**.
 
 O projeto visa fomentar a Ciência Aberta e auxiliar pesquisadores e cientistas da informação na realização de revisões sistemáticas, análises cientométricas e estudos metodológicos sobre a produção científica brasileira em estudos métricos.
@@ -83,30 +86,91 @@ flowchart TD
 
 ## 📡 Endpoints da API Pública
 
+**Base URL (produção):** `https://ebbcopendata.vercel.app`
+
+---
+
 ### 1. Lista de Artigos com Filtros
-`GET /api/articles`
-*   **Parâmetros de Consulta (Query Params):**
-    *   `year`: Anos desejados separados por vírgula (ex: `2024,2022`).
-    *   `search`: Filtro textual em título, resumo, autores e palavras-chave.
-    *   `tool`: Nome do software utilizado.
-    *   `source`: Fonte de dados de coleta pesquisada.
-    *   `limit`: Limite de paginação (padrão: `20`).
-    *   `offset`: Salto de paginação (padrão: `0`).
-    *   `sort`: Campo de ordenação (`title`, `year`, `doi`).
-    *   `order`: Sentido da ordenação (`asc` ou `desc`).
+```
+GET /api/articles
+```
+
+**Parâmetros de Consulta (Query Params):**
+
+| Parâmetro | Tipo | Padrão | Descrição |
+| :--- | :--- | :--- | :--- |
+| `search` | string | — | Busca textual em título, resumo, autores, palavras-chave, ferramentas e fontes. |
+| `year` | string | — | Filtra por edição. Aceita múltiplos separados por vírgula (ex: `2022,2024`). |
+| `author` | string | — | Filtra por nome de autor (busca parcial). |
+| `tool` | string | — | Filtra por software/ferramenta utilizada (ex: `VOSviewer`, `R`). |
+| `source` | string | — | Filtra por fonte de coleta de dados (ex: `Scopus`, `Lattes`). |
+| `stage` | string | — | Filtra por etapa metodológica: `coleta de dados`, `análise dos dados`, `visualização`. |
+| `has_tool` | boolean | — | `true` retorna apenas artigos que usam alguma ferramenta. |
+| `sort` | string | `title` | Campo de ordenação: `title`, `year` ou `doi`. |
+| `order` | string | `asc` | Sentido da ordenação: `asc` ou `desc`. |
+| `limit` | integer | `20` | Quantidade de resultados por página. |
+| `offset` | integer | `0` | Quantidade de itens a pular (paginação). |
+
+**Exemplo de resposta:**
+```json
+{
+  "total": 643,
+  "filteredCount": 12,
+  "limit": 20,
+  "offset": 0,
+  "results": [ { "doi": "...", "title": "...", "year": 2024, "authors": [...] } ]
+}
+```
+
+---
 
 ### 2. Estatísticas Consolidadas
-`GET /api/articles/stats`
-*   Retorna dados calculados dinamicamente com totais de artigos, contagem de adoção de ferramentas por ano, ranking de ferramentas utilizadas, principais fontes de coleta mapeadas e distribuição por etapas metodológicas.
+```
+GET /api/articles/stats
+```
+Retorna dados agregados calculados dinamicamente: total de artigos, distribuição por edição, taxa de adoção de ferramentas, ranking das top ferramentas, principais fontes de coleta e distribuição por etapa metodológica.
+
+---
 
 ### 3. Busca por DOI Individual
-`GET /api/articles/:doi`
-*   Retorna os metadados estruturados de um único artigo usando o DOI como identificador. Aceita tanto a URL inteira (`https://doi.org/10...`) quanto apenas o sufixo numérico.
+
+Suporta **três formatos** de chamada:
+
+```
+# Formato A — DOI URL-encoded (recomendado para clientes HTTP padrão)
+GET /api/articles/{doi_url_encoded}
+Exemplo: GET /api/articles/https%3A%2F%2Fdoi.org%2F10.22477%2Fix.ebbc.260
+
+# Formato B — Sufixo do DOI com barras brutas
+GET /api/articles/doi/{doi_suffix}
+Exemplo: GET /api/articles/doi/10.22477/ix.ebbc.260
+
+# Formato C — URL completa do DOI com barras brutas
+GET /api/articles/doi/{doi_url_completa}
+Exemplo: GET /api/articles/doi/https://doi.org/10.22477/ix.ebbc.260
+
+# Formato D — Query param (fallback)
+GET /api/articles/doi?value={doi}
+Exemplo: GET /api/articles/doi?value=https://doi.org/10.22477/ix.ebbc.260
+```
+
+---
 
 ### 4. Exportação de Arquivos
-`GET /api/articles/export`
-*   Exporta o subconjunto de artigos filtrados.
-*   Parâmetros adicionais: `format=csv` ou `format=json` (padrão: `json`).
+```
+GET /api/articles/export
+```
+Exporta o subconjunto filtrado para download. Aceita os mesmos filtros do endpoint `/api/articles` (exceto `limit` e `offset`).
+
+| Parâmetro | Valores | Padrão |
+| :--- | :--- | :--- |
+| `format` | `json` ou `csv` | `json` |
+
+**Exemplos rápidos:**
+```
+GET /api/articles/export?format=json&year=2024
+GET /api/articles/export?format=csv&tool=VOSviewer
+```
 
 ---
 
