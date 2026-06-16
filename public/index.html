@@ -448,8 +448,19 @@
                   </div>
                   <button class="btn btn-primary btn-sm" onclick="runSandboxArticles()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
                 </div>
-                <div class="sandbox-url-bar">
+                 <div class="sandbox-url-bar">
                   <strong>URL Requisitada:</strong> <span id="sb-art-url">http://localhost:3000/api/articles?limit=2</span>
+                </div>
+                <div class="sandbox-snippets">
+                  <div class="snippet-header">
+                    <span>Exemplo de Código:</span>
+                    <div class="snippet-tabs" data-endpoint="art">
+                      <button class="snippet-tab active" data-lang="js">JavaScript</button>
+                      <button class="snippet-tab" data-lang="python">Python</button>
+                      <button class="snippet-tab" data-lang="curl">cURL</button>
+                    </div>
+                  </div>
+                  <pre class="snippet-code-box"><code id="sb-art-snippet"></code></pre>
                 </div>
                 <div class="sandbox-response">
                   <pre><code id="sb-art-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
@@ -468,8 +479,19 @@
               <h3>Simulador Sandbox</h3>
               <div class="sandbox-box">
                 <button class="btn btn-primary btn-sm" onclick="runSandboxStats()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
-                <div class="sandbox-url-bar">
+                 <div class="sandbox-url-bar">
                   <strong>URL Requisitada:</strong> <span id="sb-stats-url">http://localhost:3000/api/articles/stats</span>
+                </div>
+                <div class="sandbox-snippets">
+                  <div class="snippet-header">
+                    <span>Exemplo de Código:</span>
+                    <div class="snippet-tabs" data-endpoint="stats">
+                      <button class="snippet-tab active" data-lang="js">JavaScript</button>
+                      <button class="snippet-tab" data-lang="python">Python</button>
+                      <button class="snippet-tab" data-lang="curl">cURL</button>
+                    </div>
+                  </div>
+                  <pre class="snippet-code-box"><code id="sb-stats-snippet"></code></pre>
                 </div>
                 <div class="sandbox-response">
                   <pre><code id="sb-stats-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
@@ -492,8 +514,19 @@
                   <input type="text" id="sb-doi-val" value="https://doi.org/10.22477.112" style="width: 300px;">
                   <button class="btn btn-primary btn-sm" onclick="runSandboxDoi()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
                 </div>
-                <div class="sandbox-url-bar">
+                 <div class="sandbox-url-bar">
                   <strong>URL Requisitada:</strong> <span id="sb-doi-url">http://localhost:3000/api/articles/https://doi.org/10.22477.112</span>
+                </div>
+                <div class="sandbox-snippets">
+                  <div class="snippet-header">
+                    <span>Exemplo de Código:</span>
+                    <div class="snippet-tabs" data-endpoint="doi">
+                      <button class="snippet-tab active" data-lang="js">JavaScript</button>
+                      <button class="snippet-tab" data-lang="python">Python</button>
+                      <button class="snippet-tab" data-lang="curl">cURL</button>
+                    </div>
+                  </div>
+                  <pre class="snippet-code-box"><code id="sb-doi-snippet"></code></pre>
                 </div>
                 <div class="sandbox-response">
                   <pre><code id="sb-doi-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>

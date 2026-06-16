@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDocsSidebar();
   
   // Set initial Sandbox URLs
+  initSnippetTabs();
   updateSandboxUrls();
 
   // Landing Page Transitions
@@ -750,7 +751,87 @@ async function runSandboxDoi() {
 
 function updateSandboxUrls() {
   const origin = window.location.origin;
-  document.getElementById('sb-art-url').textContent = origin + '/api/articles?limit=2';
-  document.getElementById('sb-stats-url').textContent = origin + '/api/articles/stats';
-  document.getElementById('sb-doi-url').textContent = origin + `/api/articles/${encodeURIComponent(document.getElementById('sb-doi-val').value)}`;
+  
+  // Articles Sandbox
+  const artSearch = document.getElementById('sb-art-search').value;
+  const artYear = document.getElementById('sb-art-year').value;
+  const artTool = document.getElementById('sb-art-tool').value;
+  const artLimit = document.getElementById('sb-art-limit').value || 2;
+  
+  const artParams = new URLSearchParams();
+  if (artSearch) artParams.append('search', artSearch);
+  if (artYear) artParams.append('year', artYear);
+  if (artTool) artParams.append('tool', artTool);
+  artParams.append('limit', artLimit);
+  
+  const artUrl = origin + '/api/articles?' + artParams.toString();
+  document.getElementById('sb-art-url').textContent = artUrl;
+  document.getElementById('sb-art-snippet').textContent = generateSnippetCode(artUrl, activeSnippetLang);
+  
+  // Stats Sandbox
+  const statsUrl = origin + '/api/articles/stats';
+  document.getElementById('sb-stats-url').textContent = statsUrl;
+  document.getElementById('sb-stats-snippet').textContent = generateSnippetCode(statsUrl, activeSnippetLang);
+  
+  // DOI Sandbox
+  const doiVal = document.getElementById('sb-doi-val').value;
+  const doiUrl = origin + `/api/articles/${encodeURIComponent(doiVal)}`;
+  document.getElementById('sb-doi-url').textContent = doiUrl;
+  document.getElementById('sb-doi-snippet').textContent = generateSnippetCode(doiUrl, activeSnippetLang);
+}
+
+let activeSnippetLang = 'js';
+
+function initSnippetTabs() {
+  // Bind input updates to update URLs and snippets instantly
+  ['sb-art-search', 'sb-art-year', 'sb-art-tool', 'sb-art-limit'].forEach(id => {
+    const input = document.getElementById(id);
+    if (input) {
+      input.addEventListener('input', updateSandboxUrls);
+    }
+  });
+  
+  const doiInput = document.getElementById('sb-doi-val');
+  if (doiInput) {
+    doiInput.addEventListener('input', updateSandboxUrls);
+  }
+
+  // Bind tab click events
+  document.querySelectorAll('.snippet-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const lang = tab.getAttribute('data-lang');
+      activeSnippetLang = lang;
+      
+      // Update active classes across all snippet tabs
+      document.querySelectorAll('.snippet-tab').forEach(t => {
+        if (t.getAttribute('data-lang') === lang) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+      
+      // Refresh the snippet text values
+      updateSandboxUrls();
+    });
+  });
+}
+
+function generateSnippetCode(url, lang) {
+  if (lang === 'js') {
+    return `fetch("${url}")
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));`;
+  } else if (lang === 'python') {
+    return `import requests
+
+url = "${url}"
+response = requests.get(url)
+data = response.json()
+print(data)`;
+  } else if (lang === 'curl') {
+    return `curl -X GET "${url}"`;
+  }
+  return '';
 }

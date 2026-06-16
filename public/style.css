@@ -1332,3 +1332,58 @@ select option {
     font-size: 1rem;
   }
 }
+
+/* Sandbox Code Snippets */
+.sandbox-snippets {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+.snippet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.snippet-tabs {
+  display: flex;
+  gap: 0.35rem;
+}
+.snippet-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.snippet-tab:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+.snippet-tab.active {
+  background: var(--text-primary);
+  color: var(--bg-card);
+  border-color: var(--text-primary);
+}
+.snippet-code-box {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+.snippet-code-box code {
+  color: #a9b2c3;
+  font-family: var(--font-mono);
+  white-space: pre;
+}
