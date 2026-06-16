@@ -1387,3 +1387,73 @@ select option {
   font-family: var(--font-mono);
   white-space: pre;
 }
+
+/* Charts Customizer Toolbar */
+.charts-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+.toolbar-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.toolbar-controls {
+  display: flex;
+  gap: 1.25rem;
+}
+.toolbar-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.toolbar-control label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.toolbar-select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.toolbar-select:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.toolbar-select:focus {
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .charts-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .toolbar-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .toolbar-control {
+    justify-content: space-between;
+  }
+}

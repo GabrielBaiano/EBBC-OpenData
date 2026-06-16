@@ -18,6 +18,8 @@ let currentFilters = {
 
 let statsData = null;
 let charts = {};
+let currentChartTheme = 'apple';
+let currentChartType = 'bar';
 
 // On Load Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial Sandbox URLs
   initSnippetTabs();
   updateSandboxUrls();
+  initChartCustomizerListeners();
 
   // Landing Page Transitions
   const btnEnter = document.getElementById('btn-enter-app');
@@ -154,49 +157,99 @@ function renderCharts(stats) {
   Object.values(charts).forEach(chart => chart.destroy());
   charts = {};
 
-  // Apple UI Colors for datasets
-  const colorCycle = [
-    'rgba(10, 132, 255, 0.75)',  // Blue
-    'rgba(48, 209, 88, 0.75)',   // Green
-    'rgba(94, 92, 230, 0.75)',   // Indigo
-    'rgba(255, 159, 10, 0.75)',  // Orange
-    'rgba(191, 90, 242, 0.75)',  // Purple
-    'rgba(255, 55, 95, 0.75)',   // Red
-    'rgba(100, 210, 255, 0.75)', // Teal
-    'rgba(255, 214, 10, 0.75)'   // Yellow
-  ];
+  // Palette Cycles
+  let colorCycle, borderCycle;
+  
+  if (currentChartTheme === 'monochrome') {
+    colorCycle = [
+      'rgba(255, 255, 255, 0.75)',
+      'rgba(220, 220, 220, 0.7)',
+      'rgba(180, 180, 180, 0.65)',
+      'rgba(140, 140, 140, 0.6)',
+      'rgba(110, 110, 110, 0.55)',
+      'rgba(90, 90, 90, 0.5)',
+      'rgba(70, 70, 70, 0.45)',
+      'rgba(50, 50, 50, 0.4)'
+    ];
+    borderCycle = Array(8).fill('rgba(255, 255, 255, 0.85)');
+  } else if (currentChartTheme === 'neon') {
+    colorCycle = [
+      'rgba(255, 0, 127, 0.75)',   // Hot Pink
+      'rgba(0, 240, 255, 0.75)',   // Cyan
+      'rgba(57, 255, 20, 0.75)',   // Neon Green
+      'rgba(189, 0, 255, 0.75)',   // Neon Purple
+      'rgba(255, 255, 0, 0.75)',   // Yellow
+      'rgba(255, 110, 0, 0.75)',   // Orange
+      'rgba(0, 100, 255, 0.75)',   // Blue
+      'rgba(255, 0, 0, 0.75)'      // Red
+    ];
+    borderCycle = [
+      '#ff007f', '#00f0ff', '#39ff14', '#bd00ff', '#ffff00', '#ff6e00', '#0064ff', '#ff0000'
+    ];
+  } else if (currentChartTheme === 'pastel') {
+    colorCycle = [
+      'rgba(255, 179, 186, 0.75)',  // Pink
+      'rgba(255, 223, 186, 0.75)',  // Orange
+      'rgba(255, 255, 186, 0.75)',  // Yellow
+      'rgba(186, 255, 201, 0.75)',  // Green
+      'rgba(186, 225, 255, 0.75)',  // Blue
+      'rgba(221, 186, 255, 0.75)',  // Purple
+      'rgba(255, 200, 220, 0.75)',  // Soft Rose
+      'rgba(200, 255, 240, 0.75)'   // Mint
+    ];
+    borderCycle = [
+      '#ffb3ba', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff', '#ddbaff', '#ffc8dc', '#c8fff0'
+    ];
+  } else {
+    // Apple Minimalist
+    colorCycle = [
+      'rgba(10, 132, 255, 0.75)',
+      'rgba(48, 209, 88, 0.75)',
+      'rgba(94, 92, 230, 0.75)',
+      'rgba(255, 159, 10, 0.75)',
+      'rgba(191, 90, 242, 0.75)',
+      'rgba(255, 55, 95, 0.75)',
+      'rgba(100, 210, 255, 0.75)',
+      'rgba(255, 214, 10, 0.75)'
+    ];
+    borderCycle = [
+      '#0a84ff', '#30d158', '#5e5ce6', '#ff9f0a', '#bf5af2', '#ff375f', '#64d2ff', '#ffd60a'
+    ];
+  }
 
-  const borderCycle = [
-    '#0a84ff',
-    '#30d158',
-    '#5e5ce6',
-    '#ff9f0a',
-    '#bf5af2',
-    '#ff375f',
-    '#64d2ff',
-    '#ffd60a'
-  ];
+  const isRadar = currentChartType === 'radar';
+  const isLine = currentChartType === 'line';
 
-  // 1. Chart: Publications by Year (Bar)
+  // 1. Chart: Publications by Year
   const ctxYears = document.getElementById('chart-years').getContext('2d');
   charts.years = new Chart(ctxYears, {
-    type: 'bar',
+    type: currentChartType,
     data: {
       labels: Object.keys(stats.byYear),
       datasets: [{
         label: 'Artigos nos Anais',
         data: Object.values(stats.byYear),
-        backgroundColor: colorCycle.slice(0, Object.keys(stats.byYear).length),
-        borderColor: borderCycle.slice(0, Object.keys(stats.byYear).length),
-        borderWidth: 1,
-        borderRadius: 4
+        backgroundColor: isLine ? 'rgba(10, 132, 255, 0.15)' : colorCycle.slice(0, Object.keys(stats.byYear).length),
+        borderColor: isLine ? '#0a84ff' : borderCycle.slice(0, Object.keys(stats.byYear).length),
+        borderWidth: isLine ? 2.5 : 1,
+        borderRadius: isLine ? 0 : 4,
+        fill: isLine,
+        pointBackgroundColor: isLine ? '#0a84ff' : undefined,
+        pointRadius: isLine ? 4 : undefined
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: { legend: { display: false } },
-      scales: {
+      scales: isRadar ? {
+        r: {
+          angleLines: { color: 'rgba(255, 255, 255, 0.08)' },
+          grid: { color: 'rgba(255, 255, 255, 0.08)' },
+          pointLabels: { color: '#8e8e93', font: { size: 10 } },
+          ticks: { display: false }
+        }
+      } : {
         y: { 
           beginAtZero: true, 
           ticks: { stepSize: 20 },
@@ -209,28 +262,40 @@ function renderCharts(stats) {
     }
   });
 
-  // 2. Chart: Top Tools (Horizontal Bar)
+  // 2. Chart: Top Tools
   const ctxTools = document.getElementById('chart-tools').getContext('2d');
   const topToolsData = stats.topTools.slice(0, 8);
+  const toolsIndexAxis = currentChartType === 'bar' ? 'y' : 'x';
+  
   charts.tools = new Chart(ctxTools, {
-    type: 'bar',
+    type: currentChartType,
     data: {
       labels: topToolsData.map(t => t.name),
       datasets: [{
         label: 'Frequência de Uso',
         data: topToolsData.map(t => t.count),
-        backgroundColor: colorCycle.slice(0, topToolsData.length),
-        borderColor: borderCycle.slice(0, topToolsData.length),
-        borderWidth: 1,
-        borderRadius: 3
+        backgroundColor: isLine ? 'rgba(48, 209, 88, 0.15)' : colorCycle.slice(0, topToolsData.length),
+        borderColor: isLine ? '#30d158' : borderCycle.slice(0, topToolsData.length),
+        borderWidth: isLine ? 2.5 : 1,
+        borderRadius: isLine ? 0 : 3,
+        fill: isLine,
+        pointBackgroundColor: isLine ? '#30d158' : undefined,
+        pointRadius: isLine ? 4 : undefined
       }]
     },
     options: {
-      indexAxis: 'y',
+      indexAxis: toolsIndexAxis,
       responsive: true,
       maintainAspectRatio: false,
       plugins: { legend: { display: false } },
-      scales: {
+      scales: isRadar ? {
+        r: {
+          angleLines: { color: 'rgba(255, 255, 255, 0.08)' },
+          grid: { color: 'rgba(255, 255, 255, 0.08)' },
+          pointLabels: { color: '#8e8e93', font: { size: 10 } },
+          ticks: { display: false }
+        }
+      } : (currentChartType === 'bar' ? {
         x: { 
           beginAtZero: true,
           grid: { color: 'rgba(255, 255, 255, 0.05)' }
@@ -238,31 +303,49 @@ function renderCharts(stats) {
         y: {
           grid: { display: false }
         }
-      }
+      } : {
+        y: {
+          beginAtZero: true,
+          grid: { color: 'rgba(255, 255, 255, 0.05)' }
+        },
+        x: {
+          grid: { display: false }
+        }
+      })
     }
   });
 
-  // 3. Chart: Data Sources (Bar)
+  // 3. Chart: Data Sources
   const ctxSources = document.getElementById('chart-sources').getContext('2d');
   const topSourcesData = stats.topSources.slice(0, 7);
   charts.sources = new Chart(ctxSources, {
-    type: 'bar',
+    type: currentChartType,
     data: {
       labels: topSourcesData.map(s => s.name),
       datasets: [{
         label: 'Artigos',
         data: topSourcesData.map(s => s.count),
-        backgroundColor: colorCycle.slice(3, 3 + topSourcesData.length),
-        borderColor: borderCycle.slice(3, 3 + topSourcesData.length),
-        borderWidth: 1,
-        borderRadius: 4
+        backgroundColor: isLine ? 'rgba(94, 92, 230, 0.15)' : colorCycle.slice(3, 3 + topSourcesData.length),
+        borderColor: isLine ? '#5e5ce6' : borderCycle.slice(3, 3 + topSourcesData.length),
+        borderWidth: isLine ? 2.5 : 1,
+        borderRadius: isLine ? 0 : 4,
+        fill: isLine,
+        pointBackgroundColor: isLine ? '#5e5ce6' : undefined,
+        pointRadius: isLine ? 4 : undefined
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: { legend: { display: false } },
-      scales: {
+      scales: isRadar ? {
+        r: {
+          angleLines: { color: 'rgba(255, 255, 255, 0.08)' },
+          grid: { color: 'rgba(255, 255, 255, 0.08)' },
+          pointLabels: { color: '#8e8e93', font: { size: 10 } },
+          ticks: { display: false }
+        }
+      } : {
         y: { 
           beginAtZero: true,
           grid: { color: 'rgba(255, 255, 255, 0.05)' }
@@ -274,19 +357,33 @@ function renderCharts(stats) {
     }
   });
 
-  // 4. Chart: Stages (Doughnut)
+  // 4. Chart: Stages
   const ctxStages = document.getElementById('chart-stages').getContext('2d');
+  const stagesType = isRadar ? 'polarArea' : 'doughnut';
+  
   charts.stages = new Chart(ctxStages, {
-    type: 'doughnut',
+    type: stagesType,
     data: {
       labels: Object.keys(stats.usageStages).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
       datasets: [{
         data: Object.values(stats.usageStages),
-        backgroundColor: [
-          'rgba(255, 159, 10, 0.75)',  // Coleta: Orange
-          'rgba(10, 132, 255, 0.75)',  // Análise: Blue
-          'rgba(48, 209, 88, 0.75)'    // Visualização: Green
-        ],
+        backgroundColor: currentChartTheme === 'monochrome' ? [
+          'rgba(255, 255, 255, 0.85)',
+          'rgba(180, 180, 180, 0.7)',
+          'rgba(100, 100, 100, 0.55)'
+        ] : (currentChartTheme === 'pastel' ? [
+          'rgba(255, 179, 186, 0.8)',
+          'rgba(186, 225, 255, 0.8)',
+          'rgba(186, 255, 201, 0.8)'
+        ] : (currentChartTheme === 'neon' ? [
+          'rgba(255, 0, 127, 0.8)',
+          'rgba(0, 240, 255, 0.8)',
+          'rgba(57, 255, 20, 0.8)'
+        ] : [
+          'rgba(255, 159, 10, 0.75)',
+          'rgba(10, 132, 255, 0.75)',
+          'rgba(48, 209, 88, 0.75)'
+        ])),
         borderColor: '#16161a',
         borderWidth: 3
       }]
@@ -304,9 +401,34 @@ function renderCharts(stats) {
           }
         }
       },
-      cutout: '70%'
+      cutout: stagesType === 'doughnut' ? '70%' : undefined,
+      scales: stagesType === 'polarArea' ? {
+        r: {
+          grid: { color: 'rgba(255, 255, 255, 0.06)' },
+          ticks: { display: false }
+        }
+      } : undefined
     }
   });
+}
+
+function initChartCustomizerListeners() {
+  const themeSelect = document.getElementById('chart-theme-select');
+  const typeSelect = document.getElementById('chart-type-select');
+  
+  if (themeSelect) {
+    themeSelect.addEventListener('change', (e) => {
+      currentChartTheme = e.target.value;
+      if (statsData) renderCharts(statsData);
+    });
+  }
+  
+  if (typeSelect) {
+    typeSelect.addEventListener('change', (e) => {
+      currentChartType = e.target.value;
+      if (statsData) renderCharts(statsData);
+    });
+  }
 }
 
 // ==========================================================================
