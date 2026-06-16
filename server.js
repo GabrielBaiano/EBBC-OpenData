@@ -530,3 +530,5 @@ app.listen(PORT, () => {
   console.log(`Documentation and Dashboard available at the root URL.`);
   console.log(`=======================================================`);
 });
+
+module.exports = app;
