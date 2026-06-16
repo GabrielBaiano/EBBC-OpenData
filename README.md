@@ -76,7 +76,7 @@ flowchart TD
    ```
 3. Acesse a plataforma no navegador em:
    ```
-   http://localhost:3000
+   https://ebbcopendata.vercel.app/
    ```
 
 ---
