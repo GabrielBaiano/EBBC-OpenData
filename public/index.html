@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBBC OpenData - API Pública e Painel de Metadados</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glow Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- LANDING PAGE -->
+  <div class="landing-container" id="landing-page">
+    <div class="landing-hero">
+      <div class="landing-logo">
+        <i class="fa-solid fa-server"></i>
+      </div>
+      <h1>EBBC <span>OpenData</span></h1>
+      <p class="landing-subtitle">Mapeamento Metodológico e Infraestrutura de Softwares nos Anais do EBBC (2012-2024)</p>
+      
+      <div class="landing-author-badge">
+        <i class="fa-solid fa-code"></i> Desenvolvido por Gabriel Gama
+      </div>
+    </div>
+
+    <div class="landing-features">
+      <div class="landing-feat-card">
+        <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Painel Cientométrico</h3>
+        <p>Estatísticas consolidadas e gráficos sobre a adoção de softwares e fontes de dados na pesquisa brasileira.</p>
+      </div>
+      
+      <div class="landing-feat-card">
+        <div class="feat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Explorador de Dados</h3>
+        <p>Busca de artigos e filtros cruzados por autor, ferramenta utilizada e etapa metodológica.</p>
+      </div>
+
+      <div class="landing-feat-card">
+        <div class="feat-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>API Pública & Sandbox</h3>
+        <p>Endpoints RESTful completos com simulação direta no navegador para pesquisadores e desenvolvedores.</p>
+      </div>
+    </div>
+
+    <div class="landing-about-section">
+      <p>
+        O <strong>EBBC OpenData</strong> é uma iniciativa dedicada à promoção da <strong>Ciência Aberta</strong>.
+        Utilizando técnicas avançadas de curadoria e extração automatizada de metadados assistida por IA, 
+        o projeto visa facilitar o estudo do desenvolvimento científico nacional na área de Bibliometria e Cientometria.
+      </p>
+    </div>
+
+    <div class="landing-cta">
+      <button class="btn btn-primary btn-enter" id="btn-enter-app">
+        Entrar e Usar <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="app-container" id="app-workspace" style="display: none;">
+    
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="logo-area" id="logo-to-landing" style="cursor: pointer;" title="Voltar para a página inicial">
+        <div class="logo-icon"><i class="fa-solid fa-chart-network"></i><i class="fa-solid fa-server"></i></div>
+        <div class="logo-text">
+          <h1>EBBC <span>OpenData</span></h1>
+          <p>API Aberta e Curadoria Metodológica dos Anais</p>
+        </div>
+      </div>
+      
+      <!-- Badges -->
+      <div class="header-badges">
+        <a href="https://doi.org/10.5281/zenodo.20638523" target="_blank" class="badge-link">
+          <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20638523-blue" alt="DOI Badge">
+        </a>
+        <a href="https://github.com/GabrielBaiano/EBBC-OpenData" target="_blank" class="badge-link">
+          <img src="https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github" alt="GitHub Badge">
+        </a>
+        <span class="badge-pill"><i class="fa-solid fa-graduation-cap"></i> Ciência Aberta</span>
+      </div>
+    </header>
+
+    <!-- NAVIGATION TABS -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="dashboard-tab">
+        <i class="fa-solid fa-chart-line"></i> Painel de Estatísticas
+      </button>
+      <button class="tab-btn" data-tab="explorer-tab" id="explorer-tab-btn">
+        <i class="fa-solid fa-magnifying-glass"></i> Explorador de Dados
+      </button>
+      <button class="tab-btn" data-tab="docs-tab">
+        <i class="fa-solid fa-code"></i> Documentação da API
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- 1. DASHBOARD TAB -->
+      <section id="dashboard-tab" class="tab-panel active">
+        <!-- Key Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-file-invoice"></i></div>
+            <div class="stat-info">
+              <h3>Total de Artigos</h3>
+              <p class="stat-value" id="stat-total-articles">-</p>
+            </div>
+            <div class="stat-footer">2012 a 2024</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="stat-info">
+              <h3>Adoção de Ferramentas</h3>
+              <p class="stat-value" id="stat-tool-percentage">-</p>
+            </div>
+            <div class="stat-footer" id="stat-tool-count">Processados por IA</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="stat-info">
+              <h3>Fontes Mapeadas</h3>
+              <p class="stat-value" id="stat-unique-sources">-</p>
+            </div>
+            <div class="stat-footer">Bancos de dados e portais</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-info">
+              <h3>Pesquisadores</h3>
+              <p class="stat-value" id="stat-unique-authors">-</p>
+            </div>
+            <div class="stat-footer">Autores nos anais</div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i class="fa-solid fa-calendar-days"></i> Publicações por Edição</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-years"></canvas>
+            </div>
+          </div>
+          
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i class="fa-solid fa-screwdriver-wrench"></i> Top Softwares & Ferramentas Utilizadas</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-tools"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i class="fa-solid fa-cloud-arrow-down"></i> Principais Fontes de Coleta de Dados</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-sources"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapas de Uso Metodológico</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-stages"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. DATA EXPLORER TAB -->
+      <section id="explorer-tab" class="tab-panel">
+        <div class="explorer-layout">
+          <!-- Sidebar Filters -->
+          <div class="filters-sidebar glass-panel">
+            <div class="sidebar-header">
+              <h3><i class="fa-solid fa-sliders"></i> Filtros de Busca</h3>
+              <button id="btn-clear-filters" class="btn-text">Limpar</button>
+            </div>
+            
+            <div class="filter-group">
+              <label for="search-input"><i class="fa-solid fa-magnifying-glass"></i> Busca Textual</label>
+              <input type="text" id="search-input" placeholder="Título, autor, resumo, palavra-chave...">
+            </div>
+
+            <div class="filter-group">
+              <label><i class="fa-solid fa-calendar"></i> Edições do EBBC</label>
+              <div class="checkbox-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2012" checked> EBBC 2012
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2014" checked> EBBC 2014
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2016" checked> EBBC 2016
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2018" checked> EBBC 2018
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2020" checked> EBBC 2020
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2022" checked> EBBC 2022
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="filter-year" value="2024" checked> EBBC 2024
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-tool"><i class="fa-solid fa-screwdriver-wrench"></i> Filtrar por Ferramenta</label>
+              <select id="filter-tool">
+                <option value="">Todas as ferramentas</option>
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-source"><i class="fa-solid fa-database"></i> Fonte de Coleta de Dados</label>
+              <select id="filter-source">
+                <option value="">Todas as fontes</option>
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapa Metodológica</label>
+              <select id="filter-stage">
+                <option value="">Qualquer etapa</option>
+                <option value="coleta de dados">Coleta de Dados</option>
+                <option value="análise dos dados">Análise de Dados</option>
+                <option value="visualização">Visualização de Dados</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="filter-has-tool"> Apenas artigos que usam ferramentas
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <label for="sort-select"><i class="fa-solid fa-sort"></i> Ordenar por</label>
+              <div class="sort-controls">
+                <select id="sort-select">
+                  <option value="title">Título</option>
+                  <option value="year">Ano de Edição</option>
+                  <option value="doi">DOI</option>
+                </select>
+                <button id="btn-sort-dir" class="btn-icon-toggle" title="Alternar Ordem">
+                  <i class="fa-solid fa-sort-amount-down"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="export-actions">
+              <h4><i class="fa-solid fa-download"></i> Exportar Resultados</h4>
+              <div class="btn-row">
+                <button id="btn-export-csv" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-csv"></i> CSV</button>
+                <button id="btn-export-json" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-code"></i> JSON</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Grid -->
+          <div class="results-container">
+            <div class="results-header">
+              <div class="results-count">
+                Mostrando <span id="displayed-count">0</span> de <span id="filtered-count">0</span> artigos filtrados
+              </div>
+              <div class="pagination-controls">
+                <button id="btn-prev" class="btn-icon" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                <span id="page-indicator">Pág. 1 de 1</span>
+                <button id="btn-next" class="btn-icon" disabled><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Articles List -->
+            <div class="articles-list" id="articles-list-element">
+              <!-- Dynamically populated cards -->
+              <div class="loading-state">
+                <i class="fa-solid fa-circle-notch fa-spin"></i> Carregando dados do servidor...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. API DOCUMENTATION TAB -->
+      <section id="docs-tab" class="tab-panel">
+        <div class="docs-layout">
+          <!-- API Sidebar Navigation -->
+          <div class="docs-sidebar glass-panel">
+            <h3>Endpoints</h3>
+            <ul>
+              <li><a href="#doc-overview" class="active"><i class="fa-solid fa-circle-info"></i> Introdução</a></li>
+              <li><a href="#doc-get-articles"><span class="badge get">GET</span> /api/articles</a></li>
+              <li><a href="#doc-get-stats"><span class="badge get">GET</span> /api/articles/stats</a></li>
+              <li><a href="#doc-get-doi"><span class="badge get">GET</span> /api/articles/:doi</a></li>
+              <li><a href="#doc-get-export"><span class="badge get">GET</span> /api/articles/export</a></li>
+            </ul>
+          </div>
+
+          <!-- Documentation Content -->
+          <div class="docs-content glass-panel">
+            <!-- Introduction -->
+            <div id="doc-overview" class="doc-section active">
+              <h2>Introdução à API EBBC OpenData</h2>
+              <p>A API do EBBC OpenData fornece acesso direto aos metadados e à curadoria metodológica das publicações do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) das edições de 2012 a 2024.</p>
+              <p>Com ela, pesquisadores e desenvolvedores podem filtrar artigos por autor, ano, ferramentas de software identificadas no texto, fontes de coleta de dados e etapas metodológicas onde foram aplicadas, além de realizar buscas textuais avançadas nos resumos.</p>
+              
+              <div class="info-box note">
+                <h4><i class="fa-solid fa-circle-info"></i> Formato de Resposta</h4>
+                <p>Todos os endpoints retornam dados no formato JSON, usando codificação UTF-8. As requisições de exportação podem retornar também em CSV.</p>
+              </div>
+              
+              <div class="info-box tip">
+                <h4><i class="fa-solid fa-globe"></i> CORS Habilitado</h4>
+                <p>A API suporta requisições de origens cruzadas (CORS), permitindo que você a consulte diretamente de aplicações web front-end sem a necessidade de proxies.</p>
+              </div>
+            </div>
+
+            <!-- Endpoint: GET /api/articles -->
+            <div id="doc-get-articles" class="doc-section">
+              <div class="endpoint-header">
+                <span class="badge get large">GET</span>
+                <h2>/api/articles</h2>
+              </div>
+              <p class="endpoint-desc">Retorna uma lista paginada e filtrável de artigos.</p>
+              
+              <h3>Parâmetros de Consulta (Query Params)</h3>
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parâmetro</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>search</code></td>
+                    <td>string</td>
+                    <td>Busca textual no título, resumo, autores, palavras-chave, ferramentas ou fontes.</td>
+                  </tr>
+                  <tr>
+                    <td><code>year</code></td>
+                    <td>string</td>
+                    <td>Filtro de edições. Exemplo: <code>2020</code> ou <code>2022,2024</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>author</code></td>
+                    <td>string</td>
+                    <td>Filtro por nome do autor (pesquisa parcial).</td>
+                  </tr>
+                  <tr>
+                    <td><code>tool</code></td>
+                    <td>string</td>
+                    <td>Filtro por software/ferramenta utilizada (ex: <code>R</code>, <code>VOSviewer</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>source</code></td>
+                    <td>string</td>
+                    <td>Filtro por banco de dados ou fonte de coleta (ex: <code>Scopus</code>, <code>Lattes</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>stage</code></td>
+                    <td>string</td>
+                    <td>Etapa metodológica (<code>coleta de dados</code>, <code>análise dos dados</code>, <code>visualização</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>has_tool</code></td>
+                    <td>boolean</td>
+                    <td>Filtra se o artigo utilizou algum software (<code>true</code> ou <code>false</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>limit</code></td>
+                    <td>integer</td>
+                    <td>Quantidade limite de resultados retornados por página (padrão: <code>20</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>offset</code></td>
+                    <td>integer</td>
+                    <td>Quantidade de artigos a pular para paginação (padrão: <code>0</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>sort</code></td>
+                    <td>string</td>
+                    <td>Campo para ordenação: <code>title</code>, <code>year</code>, <code>doi</code> (padrão: <code>title</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>order</code></td>
+                    <td>string</td>
+                    <td>Ordem da ordenação: <code>asc</code> ou <code>desc</code> (padrão: <code>asc</code>).</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Simulador Sandbox (Teste a Requisição)</h3>
+              <div class="sandbox-box">
+                <div class="sandbox-controls">
+                  <div class="sandbox-control-row">
+                    <label>Busca:</label> <input type="text" id="sb-art-search" placeholder="Ex: cientometria">
+                    <label>Ano:</label> <input type="text" id="sb-art-year" placeholder="Ex: 2024">
+                  </div>
+                  <div class="sandbox-control-row">
+                    <label>Ferramenta:</label> <input type="text" id="sb-art-tool" placeholder="Ex: R">
+                    <label>Limite:</label> <input type="number" id="sb-art-limit" value="2" style="width: 70px;">
+                  </div>
+                  <button class="btn btn-primary btn-sm" onclick="runSandboxArticles()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                </div>
+                <div class="sandbox-url-bar">
+                  <strong>URL Requisitada:</strong> <span id="sb-art-url">http://localhost:3000/api/articles?limit=2</span>
+                </div>
+                <div class="sandbox-response">
+                  <pre><code id="sb-art-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Endpoint: GET /api/articles/stats -->
+            <div id="doc-get-stats" class="doc-section">
+              <div class="endpoint-header">
+                <span class="badge get large">GET</span>
+                <h2>/api/articles/stats</h2>
+              </div>
+              <p class="endpoint-desc">Retorna estatísticas consolidadas e consolidadas agregadas sobre todo o dataset.</p>
+              
+              <h3>Simulador Sandbox</h3>
+              <div class="sandbox-box">
+                <button class="btn btn-primary btn-sm" onclick="runSandboxStats()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                <div class="sandbox-url-bar">
+                  <strong>URL Requisitada:</strong> <span id="sb-stats-url">http://localhost:3000/api/articles/stats</span>
+                </div>
+                <div class="sandbox-response">
+                  <pre><code id="sb-stats-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Endpoint: GET /api/articles/:doi -->
+            <div id="doc-get-doi" class="doc-section">
+              <div class="endpoint-header">
+                <span class="badge get large">GET</span>
+                <h2>/api/articles/:doi</h2>
+              </div>
+              <p class="endpoint-desc">Retorna os metadados de um único artigo com base no DOI especificado. O parâmetro <code>:doi</code> pode conter a URL completa do DOI ou apenas o seu sufixo.</p>
+
+              <h3>Simulador Sandbox</h3>
+              <div class="sandbox-box">
+                <div class="sandbox-controls">
+                  <label>DOI do Artigo:</label> 
+                  <input type="text" id="sb-doi-val" value="https://doi.org/10.22477.112" style="width: 300px;">
+                  <button class="btn btn-primary btn-sm" onclick="runSandboxDoi()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                </div>
+                <div class="sandbox-url-bar">
+                  <strong>URL Requisitada:</strong> <span id="sb-doi-url">http://localhost:3000/api/articles/https://doi.org/10.22477.112</span>
+                </div>
+                <div class="sandbox-response">
+                  <pre><code id="sb-doi-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Endpoint: GET /api/articles/export -->
+            <div id="doc-get-export" class="doc-section">
+              <div class="endpoint-header">
+                <span class="badge get large">GET</span>
+                <h2>/api/articles/export</h2>
+              </div>
+              <p class="endpoint-desc">Exporta os artigos filtrados como arquivo JSON ou CSV para download direto.</p>
+              
+              <h3>Parâmetros de Consulta (Query Params)</h3>
+              <p>Aceita exatamente os mesmos filtros do endpoint <code>/api/articles</code>, com exceção dos parâmetros de paginação (<code>limit</code> e <code>offset</code>).</p>
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parâmetro</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>format</code></td>
+                    <td>string</td>
+                    <td>Formato do download: <code>json</code> (padrão) ou <code>csv</code>.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Links de Teste Rápido</h3>
+              <div class="link-buttons">
+                <a href="/api/articles/export?format=json&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-code"></i> Baixar JSON (EBBC 2024)</a>
+                <a href="/api/articles/export?format=csv&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-csv"></i> Baixar CSV (EBBC 2024)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="app-footer-bar">
+      <div class="footer-left">
+        <p>&copy; 2026 EBBC OpenData. Desenvolvido por Gabriel Gama. Iniciativa para promoção da Ciência Aberta em Bibliometria no Brasil.</p>
+      </div>
+      <div class="footer-right">
+        <span>Desenvolvido com <i class="fa-solid fa-heart" style="color: #ef4444;"></i> para a comunidade acadêmica</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ARTICLE DETAIL MODAL -->
+  <div class="modal-overlay" id="article-modal">
+    <div class="modal-content glass-panel">
+      <button class="modal-close" id="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-area">
+        <span class="modal-year-badge" id="modal-year">2020</span>
+        <h2 id="modal-title">Título do Artigo</h2>
+        <p class="modal-authors" id="modal-authors">Autores</p>
+      </div>
+      <div class="modal-body-area">
+        
+        <div class="modal-section">
+          <h4><i class="fa-solid fa-align-left"></i> Resumo (Abstract)</h4>
+          <p id="modal-abstract" class="abstract-text">Resumo não disponível.</p>
+        </div>
+
+        <div class="modal-meta-grid">
+          <div class="meta-column">
+            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas Utilizadas</h4>
+            <div id="modal-tools" class="badge-list">Nenhuma ferramenta detectada</div>
+            
+            <h4 class="mt-4"><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapas Metodológicas de Uso</h4>
+            <div id="modal-stages" class="badge-list">N/A</div>
+          </div>
+          
+          <div class="meta-column">
+            <h4><i class="fa-solid fa-database"></i> Fontes de Coleta de Dados</h4>
+            <div id="modal-sources" class="badge-list">N/A</div>
+
+            <h4 class="mt-4"><i class="fa-solid fa-tags"></i> Palavras-chave</h4>
+            <div id="modal-keywords" class="badge-list">Nenhuma palavra-chave</div>
+          </div>
+        </div>
+        
+        <div class="modal-footer-area">
+          <span class="doi-label"><i class="fa-solid fa-link"></i> DOI:</span>
+          <a href="#" id="modal-doi-link" target="_blank" class="doi-link">https://doi.org/10.xxxx/xxxx</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application JS Code -->
+  <script src="app.js?v=5"></script>
+</body>
+</html>

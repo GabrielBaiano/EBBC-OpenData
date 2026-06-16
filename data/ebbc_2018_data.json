@@ -1,0 +1,992 @@
+[
+  {
+    "DOI": "https://doi.org/10.22477.1569",
+    "Título": "Curadoria digital e dados abertos conectados: o endpoint lod.unicentro.br como fonte informacional da web de dados para estudos bibliométricos e cientométricos",
+    "Autoria": "Sandro Rautenberg, Tony Alexander Hild, Lucélia Souza",
+    "Palavras-chave": "Cientometria; Curadoria digital; Dado aberto conectado",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2025",
+    "Título": "Análise dos estudos brasileiros de produção científica e bibliométricos: de 2000 até 2015",
+    "Autoria": "Marcia Silveira Kroeff, Marilúcia Goudinho Pilla",
+    "Palavras-chave": "Bibliometria; Estudo bibliométrico; Análise de produção científica; Estudo bibliométrico",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2024",
+    "Título": "Identificação da consolidação científica da Arquivologia durante os anos 1970",
+    "Autoria": "Roberto Lopes Santos Junior",
+    "Palavras-chave": "Comunicação científica; Arquivologia; Ano 1970",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2026",
+    "Título": "A difusão da bibliometria brasileira",
+    "Autoria": "Rubén Urbizagástegui Alvarado",
+    "Palavras-chave": "Bibliometria; Cientometria; Brasil; Modelo de bass; Difusao da literatura",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.155",
+    "Título": "Caracterização da produção científica dos gestores de Extensão e de Pesquisa, Inovação e Pós-graduação do IFRS",
+    "Autoria": "Magali Ines Pessini, Luciana Calabró Berti",
+    "Palavras-chave": "Extensão; Pesquisa; Gestore; Extensão",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.165",
+    "Título": "Altmetria e atenção online da produção de pesquisadores brasileiros: análise dos bolsistas de produtividade do CNPQ",
+    "Autoria": "Ronaldo Ferreira de Araujo, Marcelo Alves",
+    "Palavras-chave": "Altmetria; Atenção online; Pesquisador de produtividade",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2261",
+    "Título": "Cientometria e mineração de dados: um relato de uma experiência com recursos da web de dados",
+    "Autoria": "Paulo Ricardo Viviurka do Carmo, Sandro Rautenberg",
+    "Palavras-chave": "Cientometria; Web semântica; Mineração de dado; Dado aberto conectado",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2023",
+    "Título": "Padronizadores de autores: uso em base de dados",
+    "Autoria": "Ana Gabriela Clipes Ferreira",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.54545",
+    "Título": "Visibilidade e impacto internacional dos artigos latino-americanos em estudos métricos da informação",
+    "Autoria": "Maria Cláudia Cabrini Grácio, Ely Francina Tannuri de Oliveira, Dietmar Wolfram",
+    "Palavras-chave": "Produção científica latino-americana em estudo métrico da informação; Análise de citação; Análise do citante; Rede de citação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04464",
+    "Título": "Estudo preliminar sobre a influência de outliers nas métricas científicas para dados univariados",
+    "Autoria": "Luís Fernando Maia Lima, Alexandre Masson Maroldi, Dávilla Vieira Odízio da Silva, Carlos Roberto Massao Hayashi",
+    "Palavras-chave": "Bibliometria; Outliers; Cientometria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0464,",
+    "Título": "A elite e a frente de pesquisa dos EBBCS (2012 até 2016)",
+    "Autoria": "Rene Faustino Gabriel Junior, Marcos Moraes, Ely Francina Tannuri de Oliveira",
+    "Palavras-chave": "Biliometria; Cientometria",
+    "Ferramenta utilizada": "Excel",
+    "Identifica a ferramenta?": "Sim",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "análise dos dados, coleta dos dados",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.886",
+    "Título": "Publicações acadêmicas sobre juventude nas mídias sociais:  um estudo Altmétrico",
+    "Autoria": "Janinne Barcelos de Morais Silva, Frederico Ramos Oliveira, Milton Shintaku",
+    "Palavras-chave": "Mídia social; Juventude; Comunicação científica; Altmetria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.9562",
+    "Título": "Estudo métrico temático sobre biblioteca digital no Brasil: uma aplicação do software Iramuteq",
+    "Autoria": "Renato Fernandes Corrêa, Márcio Henrique Wanderley Ferreira",
+    "Palavras-chave": "Análise de conteúdo; Biblioteca digital; Ciência da informação; Mineração de texto; Visualização da informação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.449",
+    "Título": "Peculiaridades nas práticas de publicação das Ciências da Saúde no Brasil: reflexos das políticas de avaliação",
+    "Autoria": "Raimundo Nonato Macedo dos Santos, Alejandro Caballero-Rivero, Piotr Trzesniak",
+    "Palavras-chave": "Cientometria; Prática de publicação; Cultura epistêmica; Ciência da saúde; Brasil",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.4620",
+    "Título": "Coautorias internacionais do brasil em estudos métricos da informação e seus canais de comunicação",
+    "Autoria": "Fabio Orsi Meschini, Bruno Henrique Alves, Ely Francina Tannuri de Oliveira",
+    "Palavras-chave": "Cientometria e comunicação científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.595",
+    "Título": "Internacionalização da educação superior no Brasil: mapeando um domínio",
+    "Autoria": "Nancy Sánchez-Tarragó, Raimundo Nonato Macedo dos Santos, Leilah Santiago Bufrem",
+    "Palavras-chave": "Internacionalização da educação superior; Análise de domínio; Análise de rede social; Mapa da ciência",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.046546",
+    "Título": "A influência das correspondências científicas nos colégios invisíveis: verificação a partir da literatura",
+    "Autoria": "Elaine Rosangela de Oliveira Lucas, Lucas Mendes",
+    "Palavras-chave": "Correspondência científica; Colégio invisível; Comunicação científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0872",
+    "Título": "A pesquisa sobre formação e atuação profissional do bibliotecário no século XXI no Brasil",
+    "Autoria": "Adaci Aparecida Oliveira Rosa da Silva, Margarida Maria de Sousa, Asa Fujino",
+    "Palavras-chave": "Bibliotecário; Formação; Função educativa; Aprendizagem; Formação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.5454",
+    "Título": "A produção científica da Ciência da Informação estrangeira e brasileira sobre a Web Social:  um estudo métrico",
+    "Autoria": "Lucas Sobral do Nascimento, Michely Jabala Mamede Vogel",
+    "Palavras-chave": "Web social; Mídia social; Web 2.0; Ciência da informação; Produção científica; Cientometria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.545445",
+    "Título": "Avaliação dos impactos do programa de pesquisa para o SUS - PPSUS/RS no perfil acadêmico dos pesquisadores",
+    "Autoria": "Marilene Bertuol Guidini, Luciana Calabró Berti, Diogo Onofre Gomes de Souza",
+    "Palavras-chave": "Bibliometria; Ppsus; Avaliação de programa de ct&i; Rs; Rs",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04545",
+    "Título": "Estudo webométrico do Participatório da Secretaria Nacional de Juventude",
+    "Autoria": "Frederico Ramos Oliveira, Fábio Souza Gonçalves, Andrea Maria de Castro Santos Fleury Curado, Janinne Barcelos de Morais Silva, Ingrid Torres Schiessl, Priscila de Castro Paiva, Diego José Macedo, Ronnie Fagundes de Brito, Milton Shintaku",
+    "Palavras-chave": "Webometria; Juventude; Serviço ao cidadao; Sistema de governo; Participação social; Avaliação de sistema",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04654",
+    "Título": "Multi e Interdisciplinaridade na Área Ensino: formação do corpo docente e suas produções bibliográficas",
+    "Autoria": "Allani Sousa",
+    "Palavras-chave": "Interdisciplinaridade; Avaliação; Cientometria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.6544,",
+    "Título": "Citação como indicador bibliométrico de internacionalização: uma análise a partir da coleção de livros digitais do selo Cultura Acadêmica da Unesp",
+    "Autoria": "Claudio M França, Nanci Elizabeth Oddone",
+    "Palavras-chave": "Análise de citação; Internacionalização; Livro digital",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Google Scholar"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0613",
+    "Título": "Patentes das universidades da região sudeste do Brasil:  impacto e internacionalização",
+    "Autoria": "Maria Aparecida Pavanelli, Ely Francina Tannuri de Oliveira",
+    "Palavras-chave": "Bibliometria; Cientometria; Patentometría",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04553",
+    "Título": "Estudo cientométrico em periódicos da Ciência da Informação sobre marketing de bibliotecas",
+    "Autoria": "Tatielle Marques Cunha, Ilaydiany Cristina Oliveira da Silva",
+    "Palavras-chave": "Marketing; Biblioteca; Unidade de informação; Cientometria; Biblioteca",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.09562",
+    "Título": "Os pesquisadores brasileiros publicam em revistas predatórias? uma análise sobre a produção científica dos bolsistas de produtividade",
+    "Autoria": "Thaiane Oliveira, Marcelo Alves",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.05689",
+    "Título": "Contribuições da bibliometria para a seleção de materiais no desenvolvimento de produtos",
+    "Autoria": "Celise Villa Santos, Douglas Henrique Milanez, Daniel Rodrigo Leiva, Leandro Innocentini Lopes de Faria",
+    "Palavras-chave": "Bibliometria; Seleção de material; Desenvolvimento de produto",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0488",
+    "Título": "Índices de citação nacionais e regionais : importância, experiências e perspectivas para a América Latina",
+    "Autoria": "Dirce Maria Santin, Sônia Elisa Caregnato",
+    "Palavras-chave": "Bibliometria; América latina; Cientometria; Índice de citação; Base de dados",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.09593",
+    "Título": "Publicações da América Latina e Caribe em revistas:  um olhar sobre a ciência local e global",
+    "Autoria": "Dirce Maria Santin, Sônia Elisa Caregnato",
+    "Palavras-chave": "Bibliometria; Cientometria; Revista científica; América latina e caribe",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0464",
+    "Título": "Hipercrescimento e colapso: conjeturando cenários da sobrecarga das revistas científicas brasileiras líderes na Ciência da Informação",
+    "Autoria": "Vinícius Medina Kern, Mauricio Uriona Maldonado",
+    "Palavras-chave": "Periódico científico; Comunicação científica; Revisão por par; Dinámica de sistema",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0844",
+    "Título": "Sexualidade do idoso: análise de co-palavras (1996-2016)",
+    "Autoria": "Fausto José Silva Calheira, Raymundo N. Machado",
+    "Palavras-chave": "Bibliometria; Sexualidade; Idoso; Co-palavra; Idoso",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.05956",
+    "Título": "Presença de agradecimentos por financiamento nos artigos brasileiros indexados na Web of Science (2009-2016)",
+    "Autoria": "Gonzalo Rubén Alvarez, Sônia Elisa Caregnato",
+    "Palavras-chave": "Bibliometria; Agradecimento; Colaboração científica; Ciência brasileira; Ciência brasileira",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.066,64",
+    "Título": "Efeito Qualis nos Programas de Pós-Graduação da Universidade Federal de São Carlos: uma análise baseada em redes de coocorrência",
+    "Autoria": "Raquel Santos Maciel, Leandro Innocentini Lopes de Faria, Douglas Henrique Milanez, Tamie Aline Lança",
+    "Palavras-chave": "Bibliometria; Programa de pós-graduação; Plataforma lattes",
+    "Ferramenta utilizada": "VOSviewer, Excel",
+    "Identifica a ferramenta?": "Sim",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "análise dos dados, coleta dos dados, visualização - gerar gráficos",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.044845",
+    "Título": "tendências temáticas dos tccs do curso de biblioteconomia da universidade federal do rio grande do sul de 2005 a 2016: um estudo comparativo com os GTs da ANCIB",
+    "Autoria": "Ana Maria Mielniczuk de Moura, Maria Rejane Fernandes de Almeida, Caterina Marta Groposo Pavão, Rene Faustino Gabriel Junior",
+    "Palavras-chave": "Bibliometria; Biblioteconomia daufrgs; Tcc; Temática",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0555",
+    "Título": "Análise bibliométrica de teses espanholas sobre a educação de surdos",
+    "Autoria": "Daiane Natalia Schiavon, Maria Cristina Piumbato Innocentini Hayashi",
+    "Palavras-chave": "Bibliometria; Educação de surdo; Produção científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.05652",
+    "Título": "Visibilidade Científica em Acesso Aberto nas Mídias Sociais : uma análise altmétrica da Revista Gaúcha de Enfermagem",
+    "Autoria": "Samile Andrea de Souza Vanz, Rubens da Costa Silva Filho",
+    "Palavras-chave": "Altmetrics; Visibilidade científica; Acesso aberto; Altmetrics",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0363",
+    "Título": "Análise da visibilidade da revista Em Questão",
+    "Autoria": "Samile Andrea de Souza Vanz, Maiara Bettio, Natascha Helena Franz Hoppen, Karen Ribeiro de Freitas Irizaga",
+    "Palavras-chave": "Bibliometria; Periódico científico; Em questão",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.094593",
+    "Título": "Estudo comparativo de busca e recuperação de patentes da UFRGS indexadas na DII, ORBIT, INPI e Google patents",
+    "Autoria": "Ana Paula de Medeiros Magnus, Ana Maria Mielniczuk de Moura, Fernanda Bochi, Leticia Angheben El Ammar Consoni, Rene Faustino Gabriel Junior",
+    "Palavras-chave": "Patentometría; Orbit; Google patents; Inpi; Derwent",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0469",
+    "Título": "Avaliação científica de periódico em ciências sociais: junção dos indicadores fator de impacto e índice h",
+    "Autoria": "Deise Deolindo Silva, Catia Candida de Almeida, Maria Cláudia Cabrini Grácio",
+    "Palavras-chave": "Indicador bibliométrico; Índice h; Fator de impacto",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04646",
+    "Título": "Aventura compartilhada:  análise da interação entre a atividade de iniciação científica e o processo de comunicação científica do professor orientador",
+    "Autoria": "Airton Costa, Adilson Luiz Pinto, Márcio Matias",
+    "Palavras-chave": "Bibliometria; Colaboração científica; Produção científica; Informetria; Comunicação científica; Instituição de ensino superior; Formação de pesquisador",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04884",
+    "Título": "Impacto de uma única área de conhecimento sobre os indicadores de um país : a astronomia no Chile",
+    "Autoria": "Peter Alexander Schulz, Fábio Salomão Vinco e Silva",
+    "Palavras-chave": "Indicador bibliométrico; Rede de coautoria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0566261",
+    "Título": "Quadros teóricos de programas de pós-graduação em Ciência da Informação refletidos na frente de pesquisa",
+    "Autoria": "Pollyana Ágata Gomes da Rocha Custódio, Ely Francina Tannuri de Oliveira, Lidyane Silva Lima, Leilah Santiago Bufrem",
+    "Palavras-chave": "Biliometria; Cientometria; Comunicação científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04645545",
+    "Título": "O desempenho almétrico de artigos de revistas do portal USP no Facebook: o diferencial da divulgação científica?",
+    "Autoria": "Ronaldo Ferreira de Araujo, Tiago Rodrigo Marçal Murakami, André Serradas",
+    "Palavras-chave": "Altmetria; Divulgação científica; Facebook; Portal de revista usp",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.7892",
+    "Título": "Genealogia acadêmica: um estudo dos pesquisadores da área de Ciência da Informação com bolsas produtividade em pesquisa na modalidade PQ-1 do CNPq",
+    "Autoria": "Carlos Alexandre de Oliveira, Belkiz Inez Rezende Costa, Belkiz Inez Rezende Costa",
+    "Palavras-chave": "Genealogia acadêmica; Produtividade; Orientação acadêmica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.07883",
+    "Título": "As publicações do encontro brasileiro de Bibliometria e Cientometria: identificando autoria e elaborando indicadores de produção científica",
+    "Autoria": "Carlos Alexandre de Oliveira, Edcleyton Bruno Fernandes da Silva, Marlene Oliveira",
+    "Palavras-chave": "Bibliometria; Produção científica; Colaboração científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.950203",
+    "Título": "Possibilidades e limitações da plataforma Altmetric:  estudo exploratório e descritivo a partir das menções de artigos da Scielo",
+    "Autoria": "Janinne Barcelos de Morais Silva, Deise Lourenço de Jesus, João de Melo Maricato",
+    "Palavras-chave": "Comunicação científica; Mídia social; Impacto social; Altmetria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.488",
+    "Título": "Classificação dos Laboratórios de Pesquisa Biomédica baseada em publicações científicas:  um estudo de caso do Instituto Oswaldo Cruz",
+    "Autoria": "Ricardo Barros Sampaio, Vitor Hugo da Silva Martins, Ed Christiaan Noijons",
+    "Palavras-chave": "Comunicação científica; Ioc; Fiocruz",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.089",
+    "Título": "Crossref event data: registro de atividades pós-publicação",
+    "Autoria": "Edilson Damasio, Rachael Lammey",
+    "Palavras-chave": "Dado pós-publicação; Webometria; Crossref; Metadado; Datacite",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Crossref"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0605",
+    "Título": "Elementos introdutórios para uma análise bibliométrica da produção científica sobre estudos de gênero no repositório digital da UFRGS",
+    "Autoria": "Samile Andrea de Souza Vanz, Thaí­s Dias Medeiros, Natascha Helena Franz Hoppen",
+    "Palavras-chave": "Bibliometria; Estudo de gênero; Repositório institucional",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0984",
+    "Título": "Qualidade e relevância da produção científica nas ciências da saúde:  práticas de citação na área de pneumologia",
+    "Autoria": "Maria de Fátima Borges Gonçalves, José Roberto Lapa e Silva, Vânia Lisbôa da Silveira Guedes",
+    "Palavras-chave": "Análise de citação; Cientometria; Pneumologisa; Avaliação da ciência",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.49464",
+    "Título": "Estudo preliminar das maiores empresas depositantes de patentes no Brasil de 2004 a 2016 indexadas na Derwent Innovations Index – DII",
+    "Autoria": "Ana Maria Mielniczuk de Moura, Leila Morás Silva, Rene Faustino Gabriel Junior, Fernanda Bochi",
+    "Palavras-chave": "Patentometría; Patente; Empresa; Ciência e tecnologia",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0826",
+    "Título": "Influências teóricas de um pesquisador sênior da Ciência da Informação:  genealogia acadêmica do professor Aldo Barreto",
+    "Autoria": "Rene Faustino Gabriel Junior, Leilah Santiago Bufrem",
+    "Palavras-chave": "Bibliometria; Estudo de citação; Genealogia científica; Estudo de citação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04562",
+    "Título": "Influência do apoio do proex na produção bibliográfica dos programas de pós-graduação de excelência na área de astronomia/física",
+    "Autoria": "Paulo Khoury Freire, Luciana Calabró Berti, Diogo Onofre Gomes de Souza",
+    "Palavras-chave": "Bibliometria; Capes; Cientometria; Fator de impacto; Jcr; Proex; Fi; Qualis; Capes",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.056464",
+    "Título": "Uma breve análise sobre a produção científica dos médicos doutores titulados com o apoio do PBE-DPM",
+    "Autoria": "Hayslla Boaventura Piotto, Luciana Calabró Berti, Idelazil Cristina do Nascimento Talhavini, Patrisia Rodrigues de Souza",
+    "Palavras-chave": "Produção científica; Publicação; Médico pesquisador",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.841,",
+    "Título": "Análise de redes por co-ocorrência de palavras-chave: identificação de possíveis colaborações científicas",
+    "Autoria": "Nathalia Gerotti Franco, Denilson de Oliveira Sarvo, Leandro Innocentini Lopes de Faria",
+    "Palavras-chave": "Colaboração científica; Análise de rede; Coocorrência",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.45046",
+    "Título": "Produção científica brasileira em humanidades (2007/2016): dados preliminares de uma investigação em curso",
+    "Autoria": "Elías Sanz-Casado, Fábio Mascarenhas e Silva, María Luisa Lascurain Sánchez, Antonio Eleazar Serrano-López",
+    "Palavras-chave": "Humanidade; Produção científica; Ciência humana",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.84511",
+    "Título": "Qualidade e relevância da produção científica nas Ciências da Saúde: práticas de citação na área de pneumologia",
+    "Autoria": "Maria de Fátima Borges Gonçalves, José Roberto Lapa e Silva, Vânia Lisbôa da Silveira Guedes",
+    "Palavras-chave": "Análise de citação; Cientometria; Pneumologisa; Avaliação da ciência",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04543",
+    "Título": "A amazônia nas publicações científicas:  mapeando domínios temáticos",
+    "Autoria": "Cleiton da Mota de Souza, Jacqueline Leta, Sammy Aquino Pereira",
+    "Palavras-chave": "Bibliometria; Mapeamento temático; Amazônia; Publicação científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0982",
+    "Título": "Estudo webmétrico acerca da busca de informação na web sobre zika no Brasil",
+    "Autoria": "Fabio Castro Gouveia, Ilaydiany Cristina Oliveira da Silva",
+    "Palavras-chave": "Webmetría; Saúde; Zika virus; Estudo de usuários",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.045656",
+    "Título": "Criação de grafos de tópicos do conhecimento baseada em genealogia acadêmica",
+    "Autoria": "Luciano Rossi, Jesus Pascual Mena-Chalco",
+    "Palavras-chave": "Tópico do conhecimento; Genealogia acadêmica; Mineração de texto; Teoria do grafo",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0848",
+    "Título": "Redes de interação científica: identificação de comunidades de autores na UFRJ",
+    "Autoria": "Roberto Mario Lovón Canchumani",
+    "Palavras-chave": "Redes; Comunidade; Autor; Ufrj",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.5463",
+    "Título": "Influências intelectuais dos bolsistas de produtividade em Ciência da Informação no Brasil (2008 a 2017)",
+    "Autoria": "Natanael Vitor Sobral, Fábio Mascarenhas e Silva, Tatyane Lúcia Cruz, Leilah Santiago Bufrem",
+    "Palavras-chave": "Influência intelectual; Bolsista de produtividade; Produtividade",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.048846",
+    "Título": "Perfil da produção científica brasileira em saúde coletiva : análise preliminar",
+    "Autoria": "Natanael Vitor Sobral, Leny Alves Bomfim, Delma Barros Filho, Tatyane Lúcia Cruz",
+    "Palavras-chave": "Saúde coletiva; Cientometria; Produção científica; Ciência da informação; Ciência humana e social em saúde",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0861",
+    "Título": "Coautoria interinstitucional brasileira:  estudo piloto na área de células-tronco (2001-2015)",
+    "Autoria": "Raymundo N. Machado",
+    "Palavras-chave": "Coautoria interinstitucional; Produção científica",
+    "Ferramenta utilizada": "VOSviewer, Pajek",
+    "Identifica a ferramenta?": "Sim",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "análise dos dados, visualização - gerar gráficos",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.049523",
+    "Título": "Redes de palavras-chave como mecanismo para a identificação dos tópicos de interesses dos pesquisadores brasileiros",
+    "Autoria": "Thiago Magela Rodrigues Dias, Jether Oliveira Gomes, Gray Farias Moita",
+    "Palavras-chave": "Palavras-chave; Rede de palavras-chave; Plataforma lattes",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.044513",
+    "Título": "Ciência da informação como área de atuação: pesquisadores no contexto brasileiro",
+    "Autoria": "Thiago Magela Rodrigues Dias, Adilson Luiz Pinto, Elaine Rosangela de Oliveira Lucas",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.08656",
+    "Título": "Internacionalização e impacto nas Geociências:  estudo sobre a performance individual de pesquisadores",
+    "Autoria": "Anderson Santana, Rogério Mugnaini",
+    "Palavras-chave": "Bibliometria; Performance individual; Internacionalização; Impacto; Geociência; Universidade de são paulo",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.045646",
+    "Título": "Avaliação do acervo do portal capes por meio da análise das citações de teses da Universidade Federal de Santa Catarina",
+    "Autoria": "Fabio Lorenzi do Canto, Adilson Luiz Pinto",
+    "Palavras-chave": "Análise de citação; Periódico científico; Portal de periódicos (capes)",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.07841",
+    "Título": "Produção científica dos bolsitas de produtividade e desenvolvimento tecnológico do centro de informática da ufpe (2012 - 2016)",
+    "Autoria": "Sandra de Albuquerque Siebra Sousa, Ismael Rodrigues Santos, Rúbia Wanessa dos Reis Cruz",
+    "Palavras-chave": "Cientometria; Ciência da informação; Ciência da computação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.05768",
+    "Título": "A produção tecnológica de biopesticidas pelas instituições de ensino e pesquisa brasileiras: uma análise a partir de documentos de patente indexados na derwent innovations index (2010 - 2014)",
+    "Autoria": "Eloisa Príncipe de Oliveira, Maguel Souza Silva, Maria Simone de Menezes Alencar",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04953",
+    "Título": "As relações sociais na ciência: um estudo sobre a colaboração científica de grupos de pesquisa de sociologia",
+    "Autoria": "Natanael Vitor Sobral, Guilherme Alves de Santana, Fábio Mascarenhas e Silva",
+    "Palavras-chave": "Relação social; Colaboração científica; Grupo de pesquisa",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.044545",
+    "Título": "Apropriação social de redes de relacionamento:  a webometria como ferramenta de percepção da produção de referenciais internas (outlinks) e externas (backlinks)",
+    "Autoria": "Dalton Lopes Martins, Eduardo Alves Silva",
+    "Palavras-chave": "Webometria; Rede humaniza sus",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.08980",
+    "Título": "Uma análise dos pesquisadores brasileiros com bolsa de estudo para capacitação no exterior",
+    "Autoria": "Thiago Magela Rodrigues Dias, Jhonatan Fernando Oliveira",
+    "Palavras-chave": "Bibliometria; Cape; Base de dados",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.7878",
+    "Título": "Modelos dsge:  uma abordagem bibliométrica",
+    "Autoria": "Bruno Roberto Dammski, Rogério Mugnaini, Pedro Garcia Duarte",
+    "Palavras-chave": "Bibliometria; Modelo dsge",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04542",
+    "Título": "Análise dos indicadores de inovações de processos adotadas por empresas de pequeno porte localizadas no sertão de pernambuco",
+    "Autoria": "Guilherme Alves de Santana, Fábio Mascarenhas e Silva, Ednaldo José de Alencar e Silva, Lúcia Alves Domingos",
+    "Palavras-chave": "Inovação; Processo; Indicador de desempenho",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2430",
+    "Título": "PLoS ONE: promovendo os periódicos de acesso aberto ou reforçando o mainstream?",
+    "Autoria": "Jacqueline Leta",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.243",
+    "Título": "Inovação tecnológica da UFRGS: uma análise da colaboração identificada nas patentes indexadas na base Orbit",
+    "Autoria": "Fernanda Bochi, Ana Paula de Medeiros Magnus, Felipe Grando Brandão, Ana Maria Mielniczuk de Moura",
+    "Palavras-chave": "Colaboração; Patente; Patentometría; Universidade federal do rio grande do sul",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2435",
+    "Título": "E-lattes: um novo arcabouço em linguagem R para análise do currículo lattes",
+    "Autoria": "Ricardo Barros Sampaio, Antonio de Abreu Batista Junior, Jesus Pascual Mena-Chalco",
+    "Palavras-chave": "Plataforma lattes; E-latte; Fiocruz",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.5465",
+    "Título": "A Importância da Integração de dados: a produção científica nacional em Zika",
+    "Autoria": "Maria Simone de Menezes Alencar, Rosany Bochner, Daniel Giacometti",
+    "Palavras-chave": "Bibliometria; Cientometria; Zika",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus, PubMed"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2436",
+    "Título": "Autores mais citados nos trabalhos apresentados nos Enancibs:  estudo bibliométrico do período 2012-2016",
+    "Autoria": "Carlos Alberto Avila Araujo",
+    "Palavras-chave": "Bibliometria; Análise de citação; Mapa da ciência da informação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0287",
+    "Título": "Medindo o grau de multidisciplinaridade baseado em produções bibliográficas",
+    "Autoria": "Rozivaldo Zacarias de Jesus, Jesus Pascual Mena-Chalco",
+    "Palavras-chave": "Cientometria; Integração de ciência; Multi-disciplinaridade",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2438",
+    "Título": "Fluxo de citações inter-nacional: fontes de informação para avaliação de impacto científico no Brasil",
+    "Autoria": "Rogério Mugnaini, Ed Christiaan Noijons, Abel Laerte Packer",
+    "Palavras-chave": "Bibliometria; Citação; Base de dados; Scielo",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.2565",
+    "Título": "Formação, endogenia e influência institucional na academia brasileira: uma análise da absorção de doutores nas instituições de ensino superior",
+    "Autoria": "Rafael Jeferson Pezzuto Damaceno, Eduardo Amaral Haddad, Jesus Pascual Mena-Chalco",
+    "Palavras-chave": "Endogenia acadêmica; Influência acadêmica; Formação de doutore",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0256563",
+    "Título": "Adoção De Técnicas De Mineração De Texto Para Caracterização e Análise De Redes De Colaboração Científica",
+    "Autoria": "Thiago Magela Rodrigues Dias, Rafael Aparecido dos Santos, Jhonatan Fernando Oliveira",
+    "Palavras-chave": "Scientometrics; Mineração de texto; Colaboração científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0477",
+    "Título": "Web semântica e extração de dados na composição de modelo estrutural para dados de resultados de produção científica",
+    "Autoria": "José Eduardo Santarem Segundo, Dalton Lopes Martins",
+    "Palavras-chave": "Linked data; Web scraping; Web semântica; Produção científica; Extração de dado",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.05989",
+    "Título": "Fontes de dados na altmetria: um estudo exploratório",
+    "Autoria": "Vildeane da Rocha Borba, Sônia Elisa Caregnato",
+    "Palavras-chave": "Comunicação científica; Altmetria; Fonte de dado",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0465",
+    "Título": "Padrão de autoria do campo das ciências humanas e sociais da saúde: uma análise da revista história, ciências, saúde - manguinhos",
+    "Autoria": "Marcus Vinícius Pereira da Silva, Mônica da Silva Auler, Cícera Henrique da Silva",
+    "Palavras-chave": "",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04989",
+    "Título": "Tecnologias sustentáveis para aeronaves: Uma análise bibliométrica da produção científica",
+    "Autoria": "Matheus Souza Soares, Celise Villa Santos, Bráulio Salumão de Oliveria, Daniel Rodrigo Leiva, Leandro Innocentini Lopes de Faria",
+    "Palavras-chave": "Bibliometria; Mapeamento tecnológico; Indicador; Aeronave; Sustentabilidade",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0434",
+    "Título": "Modelagem de indicadores altmétricos: uma análise da influência do tempo de publicação",
+    "Autoria": "Sérgio Salustiano da Silva",
+    "Palavras-chave": "Cientometria; Altmetria; Webometria; Métrica alternativa",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0468",
+    "Título": "Análises de redes de coocorência temática para definição de áreas de concentração e linhas de pesquisa em programas de pós-graduação: o caso do PPGCINF/UNB",
+    "Autoria": "Fernando Cesar de Lima Leite, João de Melo Maricato, Veruska da Silva Costa",
+    "Palavras-chave": "Bibliometria; Cientometria; Rede socia; Pós-graduação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.045674",
+    "Título": "O outro lado da interdisciplinaridade: o interesse de outras áreas pela Ciência da Informação",
+    "Autoria": "Suzana Mueller",
+    "Palavras-chave": "Interdisciplinaridade da ciência da informação; Comunicação científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04566",
+    "Título": "Um estudo da produção científica sobre inovação na base Scopus: a participação do Brasil nas principais revistas internacionais",
+    "Autoria": "Tatiana Brandao Fernandes, Jacqueline Leta, Kizi Mendonca de Araujo",
+    "Palavras-chave": "Inovação; Produção científica; Scopus",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.045765",
+    "Título": "A pesquisa sobre acessibilidade no Brasil: um olhar sobre os grupos de pesquisa do CNPQ",
+    "Autoria": "Diego Martins Aragão Silva, Maria Cristina Soares Guimarães, Cícera Henrique da Silva, Rosangela Cordeiro Assef, Rosane Abdala Lins de Santana",
+    "Palavras-chave": "Acessibilidade; Grupo de pesquisa",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0599587",
+    "Título": "Representatividade da comunidade científica da UFRJ em base de dados internacionais: estudo cientométrico de produtividade e de colaboração científica",
+    "Autoria": "submissãoteste",
+    "Palavras-chave": "Produtividade científica; Cientometria; Colaboração científica",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "Web of Science, Scopus"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04348",
+    "Título": "Mapeamento da comunicações orais de Ciência da Informação publicadas entre os anos de 2006 e 2010 no ENANCIB",
+    "Autoria": "Tainá Regly de Moura Souza, Michely Jabala Mamede Vogel",
+    "Palavras-chave": "Enancib; Mapeamento da ciência da informação no brasil; Ciência da informação",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.047989",
+    "Título": "O uso de mídias sociais por acadêmicos brasileiros",
+    "Autoria": "Germana Barata, Ronaldo Ferreira de Araujo, Juan Pablo Alperin, Crispulo Travieso-Rodríguez",
+    "Palavras-chave": "Mídia social; Comunicação científica; Divulgação científica; Altmetria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.040o07",
+    "Título": "A obsolescência da literatura de antropologia social: análise bibliométrica da vida-média",
+    "Autoria": "Lourdes Cristina Araujo Coimbra, Maria José Veloso da Costa Santos",
+    "Palavras-chave": "Bibliometria; Vida-média; Análise de citação; Antropología social",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.0445",
+    "Título": "A produção anual de textos para discussão (PATD) do IPEA: as séries de discussões preliminares como fonte para a produção de novos indicadores",
+    "Autoria": "Veruska da Silva Costa, João de Melo Maricato",
+    "Palavras-chave": "Produção anual de texto para discussão, Indicador de produtividade, Análise de rede social, História do pensamento econômico brasileiro, Instituto de pesquisa econômica aplicada, Cientometria",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  },
+  {
+    "DOI": "https://doi.org/10.22477.04098",
+    "Título": "A Produção científica dos cursos de doutorado em Economia e sua visibilidade no Portal de Periódicos da Capes",
+    "Autoria": "Maria Aparecida Andrade Teixeira, Nanci Elizabeth Oddone",
+    "Palavras-chave": "Bibliometria; Cientometria; Comunicação científica; Lei do elitismo",
+    "Ferramenta utilizada": "N/A",
+    "Identifica a ferramenta?": "N/A",
+    "Onde usou (coleta dos dados, análise dos dados ou visualização - gerar gráficos)": "N/A",
+    "Fonte de coleta de dados (da onde o pesquisador tirou a informação?)": "N/A"
+  }
+]

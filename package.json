@@ -1,0 +1,27 @@
+{
+  "name": "ebbc-opendata",
+  "version": "1.0.0",
+  "description": "EBBC OpenData é uma API pública que disponibiliza metadados das publicações do Encontro Brasileiro de Bibliometria e Cientometria (EBBC), permitindo consultas sobre autores, artigos, instituições, palavras-chave e referências. A plataforma promove Ciência Aberta e apoia análises bibliométricas, cientométricas e informétricas.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielBaiano/EBBC-OpenData.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielBaiano/EBBC-OpenData/issues"
+  },
+  "homepage": "https://github.com/GabrielBaiano/EBBC-OpenData#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
