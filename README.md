@@ -1,6 +1,6 @@
 # 📊 EBBC OpenData — Portal & API Pública de Anais
 
-[![DOI](https://zenodo.org/badge/1271350784.svg)](https://doi.org/10.5281/zenodo.20722056)
+[![DOI](https://zenodo.org/badge/1271350784.svg)](https://doi.org/10.5281/zenodo.20722055)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github)](https://github.com/GabrielBaiano/EBBC-OpenData)
 
 O **EBBC OpenData** é uma plataforma e API científica pública projetada para consolidar, analisar e exportar os metadados bibliométricos e classificações metodológicas de todas as edições históricas viáveis do **Encontro Brasileiro de Bibliometria e Cientometria (EBBC)**, cobrindo o período de **2012 a 2024**.
@@ -194,3 +194,50 @@ A extração automática de softwares e fontes de dados analisa a combinação d
 
 ## 📄 Licença
 Este projeto é licenciado sob a **Licença MIT** — consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🗣️ Como Citar / How to Cite
+
+Se você utilizou o **EBBC OpenData** em sua pesquisa, por favor cite usando um dos formatos abaixo.
+
+### 📌 Zenodo (DOI Oficial)
+
+**ABNT:**
+> GAMA, Gabriel Nascimento. **EBBC OpenData: Portal e API Pública de Metadados dos Anais do EBBC (2012–2024)**. Zenodo, 2026. DOI: [10.5281/zenodo.20722056](https://doi.org/10.5281/zenodo.20722056). Disponível em: https://ebbcopendata.vercel.app.
+
+**APA:**
+> Gama, G. N. (2026). *EBBC OpenData: Portal e API Pública de Metadados dos Anais do EBBC (2012–2024)*. Zenodo. https://doi.org/10.5281/zenodo.20722056
+
+**BibTeX:**
+```bibtex
+@software{gama_2026_ebbc_opendata,
+  author       = {Gama, Gabriel Nascimento},
+  title        = {{EBBC OpenData: Portal e API Pública de Metadados dos Anais do EBBC (2012--2024)}},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20722056},
+  url          = {https://doi.org/10.5281/zenodo.20722056}
+}
+```
+
+---
+
+### 🐙 GitHub (Repositório)
+
+**ABNT:**
+> GAMA, Gabriel Nascimento. **EBBC OpenData**. GitHub, 2026. Disponível em: https://github.com/GabrielBaiano/EBBC-OpenData. Acesso em: [data de acesso].
+
+**APA:**
+> Gama, G. N. (2026). *EBBC OpenData* [Software]. GitHub. https://github.com/GabrielBaiano/EBBC-OpenData
+
+**BibTeX:**
+```bibtex
+@software{gama_2026_ebbc_opendata_github,
+  author       = {Gama, Gabriel Nascimento},
+  title        = {{EBBC OpenData}},
+  year         = {2026},
+  publisher    = {GitHub},
+  url          = {https://github.com/GabrielBaiano/EBBC-OpenData}
+}
+```
