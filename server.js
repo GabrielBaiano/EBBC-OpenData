@@ -17,6 +17,31 @@ app.use(express.json());
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Togglable Security Layer: API Key Validation via Bearer Token
+app.use((req, res, next) => {
+  if (process.env.REQUIRE_API_KEY === 'true') {
+    // Only protect REST API endpoints (let the dashboard web assets load freely)
+    if (req.path.startsWith('/api/')) {
+      const authHeader = req.headers['authorization'];
+      const expectedToken = process.env.API_KEY || 'ebbc_secret_key_2026';
+      
+      if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ 
+          error: 'Não autorizado. Cabeçalho de autorização Bearer ausente ou inválido.' 
+        });
+      }
+      
+      const token = authHeader.split(' ')[1];
+      if (token !== expectedToken) {
+        return res.status(401).json({ 
+          error: 'Não autorizado. Token de API incorreto.' 
+        });
+      }
+    }
+  }
+  next();
+});
+
 // -------------------------------------------------------------
 // Helper Functions for Data Processing
 // -------------------------------------------------------------
@@ -531,4 +556,4 @@ app.listen(PORT, () => {
   console.log(`=======================================================`);
 });
 
-module.exports = app;
+export default app;
