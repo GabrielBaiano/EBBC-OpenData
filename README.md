@@ -1,7 +1,12 @@
 # 📊 EBBC OpenData — Portal & API Pública de Anais
 
+<div align="right">
+  <b>🇧🇷 Português</b> | <a href="README.en.md">🇺🇸 English</a>
+</div>
+
 [![DOI](https://zenodo.org/badge/1271350784.svg)](https://doi.org/10.5281/zenodo.20722055)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github)](https://github.com/GabrielBaiano/EBBC-OpenData)
+
 
 O **EBBC OpenData** é uma plataforma e API científica pública projetada para consolidar, analisar e exportar os metadados bibliométricos e classificações metodológicas de todas as edições históricas viáveis do **Encontro Brasileiro de Bibliometria e Cientometria (EBBC)**, cobrindo o período de **2012 a 2024**.
 

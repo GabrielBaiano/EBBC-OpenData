@@ -28,40 +28,46 @@
 
   <!-- LANDING PAGE -->
   <div class="landing-container" id="landing-page">
+    <div class="landing-lang-wrapper">
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
     <div class="landing-hero">
       <div class="landing-logo">
         <i class="fa-solid fa-server"></i>
       </div>
       <h1>EBBC <span>OpenData</span></h1>
-      <p class="landing-subtitle">Mapeamento Metodológico e Infraestrutura de Softwares nos Anais do EBBC (2012-2024)</p>
+      <p class="landing-subtitle" data-i18n="landing-subtitle">Mapeamento Metodológico e Infraestrutura de Softwares nos Anais do EBBC (2012-2024)</p>
       
       <div class="landing-author-badge">
-        <i class="fa-solid fa-code"></i> Desenvolvido por Gabriel Gama
+        <i class="fa-solid fa-code"></i> <span data-i18n="landing-developed-by">Desenvolvido por Gabriel Gama</span>
       </div>
     </div>
 
     <div class="landing-features">
       <div class="landing-feat-card">
         <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Painel Cientométrico</h3>
-        <p>Estatísticas consolidadas e gráficos sobre a adoção de softwares e fontes de dados na pesquisa brasileira.</p>
+        <h3 data-i18n="feat-dash-title">Painel Cientométrico</h3>
+        <p data-i18n="feat-dash-desc">Estatísticas consolidadas e gráficos sobre a adoção de softwares e fontes de dados na pesquisa brasileira.</p>
       </div>
       
       <div class="landing-feat-card">
         <div class="feat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-        <h3>Explorador de Dados</h3>
-        <p>Busca de artigos e filtros cruzados por autor, ferramenta utilizada e etapa metodológica.</p>
+        <h3 data-i18n="feat-exp-title">Explorador de Dados</h3>
+        <p data-i18n="feat-exp-desc">Busca de artigos e filtros cruzados por autor, ferramenta utilizada e etapa metodológica.</p>
       </div>
 
       <div class="landing-feat-card">
         <div class="feat-icon"><i class="fa-solid fa-code"></i></div>
-        <h3>API Pública & Sandbox</h3>
-        <p>Endpoints RESTful completos com simulação direta no navegador para pesquisadores e desenvolvedores.</p>
+        <h3 data-i18n="feat-api-title">API Pública & Sandbox</h3>
+        <p data-i18n="feat-api-desc">Endpoints RESTful completos com simulação direta no navegador para pesquisadores e desenvolvedores.</p>
       </div>
     </div>
 
     <div class="landing-about-section">
-      <p>
+      <p data-i18n="landing-about">
         O <strong>EBBC OpenData</strong> é uma iniciativa dedicada à promoção da <strong>Ciência Aberta</strong>.
         Utilizando técnicas avançadas de curadoria e extração automatizada de metadados assistida por IA, 
         o projeto visa facilitar o estudo do desenvolvimento científico nacional na área de Bibliometria e Cientometria.
@@ -70,7 +76,7 @@
 
     <div class="landing-cta">
       <button class="btn btn-primary btn-enter" id="btn-enter-app">
-        Entrar e Usar <i class="fa-solid fa-arrow-right"></i>
+        <span data-i18n="btn-enter">Entrar e Usar</span> <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
   </div>
@@ -83,7 +89,7 @@
         <div class="logo-icon"><i class="fa-solid fa-chart-network"></i><i class="fa-solid fa-server"></i></div>
         <div class="logo-text">
           <h1>EBBC <span>OpenData</span></h1>
-          <p>API Aberta e Curadoria Metodológica dos Anais</p>
+          <p data-i18n="header-subtitle">API Aberta e Curadoria Metodológica dos Anais</p>
         </div>
       </div>
       
@@ -95,20 +101,24 @@
         <a href="https://github.com/GabrielBaiano/EBBC-OpenData" target="_blank" class="badge-link">
           <img src="https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github" alt="GitHub Badge">
         </a>
-        <span class="badge-pill"><i class="fa-solid fa-graduation-cap"></i> Ciência Aberta</span>
+        <span class="badge-pill"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="open-science">Ciência Aberta</span></span>
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
 
     <!-- NAVIGATION TABS -->
     <nav class="nav-tabs">
       <button class="tab-btn active" data-tab="dashboard-tab">
-        <i class="fa-solid fa-chart-line"></i> Painel de Estatísticas
+        <i class="fa-solid fa-chart-line"></i> <span data-i18n="tab-stats">Painel de Estatísticas</span>
       </button>
       <button class="tab-btn" data-tab="explorer-tab" id="explorer-tab-btn">
-        <i class="fa-solid fa-magnifying-glass"></i> Explorador de Dados
+        <i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="tab-explorer">Explorador de Dados</span>
       </button>
       <button class="tab-btn" data-tab="docs-tab">
-        <i class="fa-solid fa-code"></i> Documentação da API
+        <i class="fa-solid fa-code"></i> <span data-i18n="tab-docs">Documentação da API</span>
       </button>
     </nav>
 
@@ -122,62 +132,62 @@
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-file-invoice"></i></div>
             <div class="stat-info">
-              <h3>Total de Artigos</h3>
+              <h3 data-i18n="stat-total-title">Total de Artigos</h3>
               <p class="stat-value" id="stat-total-articles">-</p>
             </div>
-            <div class="stat-footer">2012 a 2024</div>
+            <div class="stat-footer" data-i18n="stat-total-footer">2012 a 2024</div>
           </div>
           
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
             <div class="stat-info">
-              <h3>Adoção de Ferramentas</h3>
+              <h3 data-i18n="stat-tools-title">Adoção de Ferramentas</h3>
               <p class="stat-value" id="stat-tool-percentage">-</p>
             </div>
-            <div class="stat-footer" id="stat-tool-count">Processados por IA</div>
+            <div class="stat-footer" id="stat-tool-count" data-i18n="stat-tools-footer">Processados por IA</div>
           </div>
           
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
             <div class="stat-info">
-              <h3>Fontes Mapeadas</h3>
+              <h3 data-i18n="stat-sources-title">Fontes Mapeadas</h3>
               <p class="stat-value" id="stat-unique-sources">-</p>
             </div>
-            <div class="stat-footer">Bancos de dados e portais</div>
+            <div class="stat-footer" data-i18n="stat-sources-footer">Bancos de dados e portais</div>
           </div>
           
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
             <div class="stat-info">
-              <h3>Pesquisadores</h3>
+              <h3 data-i18n="stat-authors-title">Pesquisadores</h3>
               <p class="stat-value" id="stat-unique-authors">-</p>
             </div>
-            <div class="stat-footer">Autores nos anais</div>
+            <div class="stat-footer" data-i18n="stat-authors-footer">Autores nos anais</div>
           </div>
         </div>
 
         <!-- Charts Customizer Toolbar -->
         <div class="charts-toolbar glass-panel">
           <div class="toolbar-title">
-            <i class="fa-solid fa-chart-line"></i> Personalizar Visualização
+            <i class="fa-solid fa-chart-line"></i> <span data-i18n="toolbar-title">Personalizar Visualização</span>
           </div>
           <div class="toolbar-controls">
             <div class="toolbar-control">
-              <label for="chart-theme-select"><i class="fa-solid fa-palette"></i> Paleta:</label>
+              <label for="chart-theme-select"><i class="fa-solid fa-palette"></i> <span data-i18n="toolbar-palette">Paleta:</span></label>
               <select id="chart-theme-select" class="toolbar-select">
-                <option value="apple">Apple Minimalist</option>
-                <option value="monochrome">Monocromático Sleek</option>
-                <option value="neon">Neon Cyberpunk</option>
-                <option value="pastel">Pastel Suave</option>
+                <option value="apple" data-i18n="palette-apple">Apple Minimalist</option>
+                <option value="monochrome" data-i18n="palette-mono">Monocromático Sleek</option>
+                <option value="neon" data-i18n="palette-neon">Neon Cyberpunk</option>
+                <option value="pastel" data-i18n="palette-pastel">Pastel Suave</option>
               </select>
             </div>
             
             <div class="toolbar-control">
-              <label for="chart-type-select"><i class="fa-solid fa-chart-bar"></i> Tipo de Gráfico:</label>
+              <label for="chart-type-select"><i class="fa-solid fa-chart-bar"></i> <span data-i18n="toolbar-type">Tipo de Gráfico:</span></label>
               <select id="chart-type-select" class="toolbar-select">
-                <option value="bar">Barras / Colunas</option>
-                <option value="line">Linhas / Conexões</option>
-                <option value="radar">Radar (Teia)</option>
+                <option value="bar" data-i18n="type-bar">Barras / Colunas</option>
+                <option value="line" data-i18n="type-line">Linhas / Conexões</option>
+                <option value="radar" data-i18n="type-radar">Radar (Teia)</option>
               </select>
             </div>
           </div>
@@ -187,7 +197,7 @@
         <div class="charts-grid">
           <div class="chart-card">
             <div class="chart-header">
-              <h3><i class="fa-solid fa-calendar-days"></i> Publicações por Edição</h3>
+              <h3><i class="fa-solid fa-calendar-days"></i> <span data-i18n="chart-years-title">Publicações por Edição</span></h3>
             </div>
             <div class="chart-container">
               <canvas id="chart-years"></canvas>
@@ -196,7 +206,7 @@
           
           <div class="chart-card">
             <div class="chart-header">
-              <h3><i class="fa-solid fa-screwdriver-wrench"></i> Top Softwares & Ferramentas Utilizadas</h3>
+              <h3><i class="fa-solid fa-screwdriver-wrench"></i> <span data-i18n="chart-tools-title">Top Softwares & Ferramentas Utilizadas</span></h3>
             </div>
             <div class="chart-container">
               <canvas id="chart-tools"></canvas>
@@ -205,7 +215,7 @@
 
           <div class="chart-card">
             <div class="chart-header">
-              <h3><i class="fa-solid fa-cloud-arrow-down"></i> Principais Fontes de Coleta de Dados</h3>
+              <h3><i class="fa-solid fa-cloud-arrow-down"></i> <span data-i18n="chart-sources-title">Principais Fontes de Coleta de Dados</span></h3>
             </div>
             <div class="chart-container">
               <canvas id="chart-sources"></canvas>
@@ -214,7 +224,7 @@
 
           <div class="chart-card">
             <div class="chart-header">
-              <h3><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapas de Uso Metodológico</h3>
+              <h3><i class="fa-solid fa-arrows-split-up-and-left"></i> <span data-i18n="chart-stages-title">Etapas de Uso Metodológico</span></h3>
             </div>
             <div class="chart-container">
               <canvas id="chart-stages"></canvas>
@@ -229,17 +239,17 @@
           <!-- Sidebar Filters -->
           <div class="filters-sidebar glass-panel">
             <div class="sidebar-header">
-              <h3><i class="fa-solid fa-sliders"></i> Filtros de Busca</h3>
-              <button id="btn-clear-filters" class="btn-text">Limpar</button>
+              <h3><i class="fa-solid fa-sliders"></i> <span data-i18n="filters-title">Filtros de Busca</span></h3>
+              <button id="btn-clear-filters" class="btn-text" data-i18n="filters-clear">Limpar</button>
             </div>
             
             <div class="filter-group">
-              <label for="search-input"><i class="fa-solid fa-magnifying-glass"></i> Busca Textual</label>
-              <input type="text" id="search-input" placeholder="Título, autor, resumo, palavra-chave...">
+              <label for="search-input"><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="filters-search-label">Busca Textual</span></label>
+              <input type="text" id="search-input" data-i18n-placeholder="filters-search-placeholder" placeholder="Título, autor, resumo, palavra-chave...">
             </div>
 
             <div class="filter-group">
-              <label><i class="fa-solid fa-calendar"></i> Edições do EBBC</label>
+              <label><i class="fa-solid fa-calendar"></i> <span data-i18n="filters-editions">Edições do EBBC</span></label>
               <div class="checkbox-group">
                 <label class="checkbox-container">
                   <input type="checkbox" class="filter-year" value="2012" checked> EBBC 2012
@@ -273,54 +283,54 @@
             </div>
 
             <div class="filter-group">
-              <label for="filter-tool"><i class="fa-solid fa-screwdriver-wrench"></i> Filtrar por Ferramenta</label>
+              <label for="filter-tool"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-i18n="filters-tool-label">Filtrar por Ferramenta</span></label>
               <select id="filter-tool">
-                <option value="">Todas as ferramentas</option>
+                <option value="" data-i18n="filters-all-tools">Todas as ferramentas</option>
                 <!-- Dynamically populated -->
               </select>
             </div>
 
             <div class="filter-group">
-              <label for="filter-source"><i class="fa-solid fa-database"></i> Fonte de Coleta de Dados</label>
+              <label for="filter-source"><i class="fa-solid fa-database"></i> <span data-i18n="filters-source-label">Fonte de Coleta de Dados</span></label>
               <select id="filter-source">
-                <option value="">Todas as fontes</option>
+                <option value="" data-i18n="filters-all-sources">Todas as fontes</option>
                 <!-- Dynamically populated -->
               </select>
             </div>
 
             <div class="filter-group">
-              <label for="filter-stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapa Metodológica</label>
+              <label for="filter-stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> <span data-i18n="filters-stage-label">Etapa Metodológica</span></label>
               <select id="filter-stage">
-                <option value="">Qualquer etapa</option>
-                <option value="coleta de dados">Coleta de Dados</option>
-                <option value="análise dos dados">Análise de Dados</option>
-                <option value="visualização">Visualização de Dados</option>
+                <option value="" data-i18n="filters-any-stage">Qualquer etapa</option>
+                <option value="coleta de dados" data-i18n="stage-coleta">Coleta de Dados</option>
+                <option value="análise dos dados" data-i18n="stage-analise">Análise de Dados</option>
+                <option value="visualização" data-i18n="stage-visualizacao">Visualização de Dados</option>
               </select>
             </div>
 
             <div class="filter-group">
               <label class="checkbox-container">
-                <input type="checkbox" id="filter-has-tool"> Apenas artigos que usam ferramentas
+                <input type="checkbox" id="filter-has-tool"> <span data-i18n="filters-has-tool">Apenas artigos que usam ferramentas</span>
                 <span class="checkmark"></span>
               </label>
             </div>
 
             <div class="filter-group">
-              <label for="sort-select"><i class="fa-solid fa-sort"></i> Ordenar por</label>
+              <label for="sort-select"><i class="fa-solid fa-sort"></i> <span data-i18n="filters-sort-label">Ordenar por</span></label>
               <div class="sort-controls">
                 <select id="sort-select">
-                  <option value="title">Título</option>
-                  <option value="year">Ano de Edição</option>
-                  <option value="doi">DOI</option>
+                  <option value="title" data-i18n="sort-title">Título</option>
+                  <option value="year" data-i18n="sort-year">Ano de Edição</option>
+                  <option value="doi" data-i18n="sort-doi">DOI</option>
                 </select>
-                <button id="btn-sort-dir" class="btn-icon-toggle" title="Alternar Ordem">
+                <button id="btn-sort-dir" class="btn-icon-toggle" data-i18n-title="sort-dir-title" title="Alternar Ordem">
                   <i class="fa-solid fa-sort-amount-down"></i>
                 </button>
               </div>
             </div>
             
             <div class="export-actions">
-              <h4><i class="fa-solid fa-download"></i> Exportar Resultados</h4>
+              <h4><i class="fa-solid fa-download"></i> <span data-i18n="export-title">Exportar Resultados</span></h4>
               <div class="btn-row">
                 <button id="btn-export-csv" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-csv"></i> CSV</button>
                 <button id="btn-export-json" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-code"></i> JSON</button>
@@ -351,15 +361,14 @@
           </div>
         </div>
       </section>
-
       <!-- 3. API DOCUMENTATION TAB -->
       <section id="docs-tab" class="tab-panel">
         <div class="docs-layout">
           <!-- API Sidebar Navigation -->
           <div class="docs-sidebar glass-panel">
-            <h3>Endpoints</h3>
+            <h3 data-i18n="docs-sidebar-title">Endpoints</h3>
             <ul>
-              <li><a href="#doc-overview" class="active"><i class="fa-solid fa-circle-info"></i> Introdução</a></li>
+              <li><a href="#doc-overview" class="active"><i class="fa-solid fa-circle-info"></i> <span data-i18n="docs-link-intro">Introdução</span></a></li>
               <li><a href="#doc-get-articles"><span class="badge get">GET</span> /api/articles</a></li>
               <li><a href="#doc-get-stats"><span class="badge get">GET</span> /api/articles/stats</a></li>
               <li><a href="#doc-get-doi"><span class="badge get">GET</span> /api/articles/:doi</a></li>
@@ -371,18 +380,35 @@
           <div class="docs-content glass-panel">
             <!-- Introduction -->
             <div id="doc-overview" class="doc-section active">
-              <h2>Introdução à API EBBC OpenData</h2>
-              <p>A API do EBBC OpenData fornece acesso direto aos metadados e à curadoria metodológica das publicações do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) das edições de 2012 a 2024.</p>
-              <p>Com ela, pesquisadores e desenvolvedores podem filtrar artigos por autor, ano, ferramentas de software identificadas no texto, fontes de coleta de dados e etapas metodológicas onde foram aplicadas, além de realizar buscas textuais avançadas nos resumos.</p>
-              
-              <div class="info-box note">
-                <h4><i class="fa-solid fa-circle-info"></i> Formato de Resposta</h4>
-                <p>Todos os endpoints retornam dados no formato JSON, usando codificação UTF-8. As requisições de exportação podem retornar também em CSV.</p>
+              <div class="lang-pt-only">
+                <h2>Introdução à API EBBC OpenData</h2>
+                <p>A API do EBBC OpenData fornece acesso direto aos metadados e à curadoria metodológica das publicações do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) das edições de 2012 a 2024.</p>
+                <p>Com ela, pesquisadores e desenvolvedores podem filtrar artigos por autor, ano, ferramentas de software identificadas no texto, fontes de coleta de dados e etapas metodológicas onde foram aplicadas, além de realizar buscas textuais avançadas nos resumos.</p>
+                
+                <div class="info-box note">
+                  <h4><i class="fa-solid fa-circle-info"></i> Formato de Resposta</h4>
+                  <p>Todos os endpoints retornam dados no formato JSON, usando codificação UTF-8. As requisições de exportação podem retornar também em CSV.</p>
+                </div>
+                
+                <div class="info-box tip">
+                  <h4><i class="fa-solid fa-globe"></i> CORS Habilitado</h4>
+                  <p>A API suporta requisições de origens cruzadas (CORS), permitindo que você a consulte diretamente de aplicações web front-end sem a necessidade de proxies.</p>
+                </div>
               </div>
-              
-              <div class="info-box tip">
-                <h4><i class="fa-solid fa-globe"></i> CORS Habilitado</h4>
-                <p>A API suporta requisições de origens cruzadas (CORS), permitindo que você a consulte diretamente de aplicações web front-end sem a necessidade de proxies.</p>
+              <div class="lang-en-only">
+                <h2>Introduction to the EBBC OpenData API</h2>
+                <p>The EBBC OpenData API provides direct access to metadata and methodological curation of publications from the Brazilian Meeting on Bibliometrics and Scientometrics (EBBC) for editions from 2012 to 2024.</p>
+                <p>With it, researchers and developers can filter articles by author, year, software tools identified in the text, data collection sources, and methodological stages where they were applied, as well as perform advanced text searches in abstracts.</p>
+                
+                <div class="info-box note">
+                  <h4><i class="fa-solid fa-circle-info"></i> Response Format</h4>
+                  <p>All endpoints return data in JSON format using UTF-8 encoding. Export requests can also return in CSV.</p>
+                </div>
+                
+                <div class="info-box tip">
+                  <h4><i class="fa-solid fa-globe"></i> CORS Enabled</h4>
+                  <p>The API supports Cross-Origin Resource Sharing (CORS), allowing you to query it directly from frontend web applications without proxies.</p>
+                </div>
               </div>
             </div>
 
@@ -392,91 +418,165 @@
                 <span class="badge get large">GET</span>
                 <h2>/api/articles</h2>
               </div>
-              <p class="endpoint-desc">Retorna uma lista paginada e filtrável de artigos.</p>
               
-              <h3>Parâmetros de Consulta (Query Params)</h3>
-              <table class="params-table">
-                <thead>
-                  <tr>
-                    <th>Parâmetro</th>
-                    <th>Tipo</th>
-                    <th>Descrição</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>search</code></td>
-                    <td>string</td>
-                    <td>Busca textual no título, resumo, autores, palavras-chave, ferramentas ou fontes.</td>
-                  </tr>
-                  <tr>
-                    <td><code>year</code></td>
-                    <td>string</td>
-                    <td>Filtro de edições. Exemplo: <code>2020</code> ou <code>2022,2024</code>.</td>
-                  </tr>
-                  <tr>
-                    <td><code>author</code></td>
-                    <td>string</td>
-                    <td>Filtro por nome do autor (pesquisa parcial).</td>
-                  </tr>
-                  <tr>
-                    <td><code>tool</code></td>
-                    <td>string</td>
-                    <td>Filtro por software/ferramenta utilizada (ex: <code>R</code>, <code>VOSviewer</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>source</code></td>
-                    <td>string</td>
-                    <td>Filtro por banco de dados ou fonte de coleta (ex: <code>Scopus</code>, <code>Lattes</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>stage</code></td>
-                    <td>string</td>
-                    <td>Etapa metodológica (<code>coleta de dados</code>, <code>análise dos dados</code>, <code>visualização</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>has_tool</code></td>
-                    <td>boolean</td>
-                    <td>Filtra se o artigo utilizou algum software (<code>true</code> ou <code>false</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>limit</code></td>
-                    <td>integer</td>
-                    <td>Quantidade limite de resultados retornados por página (padrão: <code>20</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>offset</code></td>
-                    <td>integer</td>
-                    <td>Quantidade de artigos a pular para paginação (padrão: <code>0</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>sort</code></td>
-                    <td>string</td>
-                    <td>Campo para ordenação: <code>title</code>, <code>year</code>, <code>doi</code> (padrão: <code>title</code>).</td>
-                  </tr>
-                  <tr>
-                    <td><code>order</code></td>
-                    <td>string</td>
-                    <td>Ordem da ordenação: <code>asc</code> ou <code>desc</code> (padrão: <code>asc</code>).</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="lang-pt-only">
+                <p class="endpoint-desc">Retorna uma lista paginada e filtrável de artigos.</p>
+                <h3>Parâmetros de Consulta (Query Params)</h3>
+                <table class="params-table">
+                  <thead>
+                    <tr>
+                      <th>Parâmetro</th>
+                      <th>Tipo</th>
+                      <th>Descrição</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>search</code></td>
+                      <td>string</td>
+                      <td>Busca textual no título, resumo, autores, palavras-chave, ferramentas ou fontes.</td>
+                    </tr>
+                    <tr>
+                      <td><code>year</code></td>
+                      <td>string</td>
+                      <td>Filtro de edições. Exemplo: <code>2020</code> ou <code>2022,2024</code>.</td>
+                    </tr>
+                    <tr>
+                      <td><code>author</code></td>
+                      <td>string</td>
+                      <td>Filtro por nome do autor (pesquisa parcial).</td>
+                    </tr>
+                    <tr>
+                      <td><code>tool</code></td>
+                      <td>string</td>
+                      <td>Filtro por software/ferramenta utilizada (ex: <code>R</code>, <code>VOSviewer</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>source</code></td>
+                      <td>string</td>
+                      <td>Filtro por banco de dados ou fonte de coleta (ex: <code>Scopus</code>, <code>Lattes</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>stage</code></td>
+                      <td>string</td>
+                      <td>Etapa metodológica (<code>coleta de dados</code>, <code>análise dos dados</code>, <code>visualização</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>has_tool</code></td>
+                      <td>boolean</td>
+                      <td>Filtra se o artigo utilizou algum software (<code>true</code> ou <code>false</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>limit</code></td>
+                      <td>integer</td>
+                      <td>Quantidade limite de resultados retornados por página (padrão: <code>20</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>offset</code></td>
+                      <td>integer</td>
+                      <td>Quantidade de artigos a pular para paginação (padrão: <code>0</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>sort</code></td>
+                      <td>string</td>
+                      <td>Campo para ordenação: <code>title</code>, <code>year</code>, <code>doi</code> (padrão: <code>title</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>order</code></td>
+                      <td>string</td>
+                      <td>Ordem da ordenação: <code>asc</code> ou <code>desc</code> (padrão: <code>asc</code>).</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Simulador Sandbox (Teste a Requisição)</h3>
+              </div>
+              
+              <div class="lang-en-only">
+                <p class="endpoint-desc">Returns a paginated and filterable list of articles.</p>
+                <h3>Query Parameters (Query Params)</h3>
+                <table class="params-table">
+                  <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>search</code></td>
+                      <td>string</td>
+                      <td>Text search in title, abstract, authors, keywords, tools, or sources.</td>
+                    </tr>
+                    <tr>
+                      <td><code>year</code></td>
+                      <td>string</td>
+                      <td>Editions filter. Example: <code>2020</code> or <code>2022,2024</code>.</td>
+                    </tr>
+                    <tr>
+                      <td><code>author</code></td>
+                      <td>string</td>
+                      <td>Filter by author name (partial match).</td>
+                    </tr>
+                    <tr>
+                      <td><code>tool</code></td>
+                      <td>string</td>
+                      <td>Filter by software/tool used (e.g. <code>R</code>, <code>VOSviewer</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>source</code></td>
+                      <td>string</td>
+                      <td>Filter by database or collection source (e.g. <code>Scopus</code>, <code>Lattes</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>stage</code></td>
+                      <td>string</td>
+                      <td>Methodological stage (<code>coleta de dados</code>, <code>análise dos dados</code>, <code>visualização</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>has_tool</code></td>
+                      <td>boolean</td>
+                      <td>Filters whether the article used any software (<code>true</code> or <code>false</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>limit</code></td>
+                      <td>integer</td>
+                      <td>Limit of results returned per page (default: <code>20</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>offset</code></td>
+                      <td>integer</td>
+                      <td>Number of articles to skip for pagination (default: <code>0</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>sort</code></td>
+                      <td>string</td>
+                      <td>Field for sorting: <code>title</code>, <code>year</code>, <code>doi</code> (default: <code>title</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>order</code></td>
+                      <td>string</td>
+                      <td>Sorting order: <code>asc</code> or <code>desc</code> (default: <code>asc</code>).</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Sandbox Simulator (Test Request)</h3>
+              </div>
 
-              <h3>Simulador Sandbox (Teste a Requisição)</h3>
               <div class="sandbox-box">
                 <div class="sandbox-controls">
                   <div class="sandbox-control-row">
-                    <label>Busca:</label> <input type="text" id="sb-art-search" placeholder="Ex: cientometria">
-                    <label>Ano:</label> <input type="text" id="sb-art-year" placeholder="Ex: 2024">
+                    <label data-i18n="sb-label-search">Busca:</label> <input type="text" id="sb-art-search" data-i18n-placeholder="sb-placeholder-search" placeholder="Ex: cientometria">
+                    <label data-i18n="sb-label-year">Ano:</label> <input type="text" id="sb-art-year" data-i18n-placeholder="sb-placeholder-year" placeholder="Ex: 2024">
                   </div>
                   <div class="sandbox-control-row">
-                    <label>Ferramenta:</label> <input type="text" id="sb-art-tool" placeholder="Ex: R">
-                    <label>Limite:</label> <input type="number" id="sb-art-limit" value="2" style="width: 70px;">
+                    <label data-i18n="sb-label-tool">Ferramenta:</label> <input type="text" id="sb-art-tool" data-i18n-placeholder="sb-placeholder-tool" placeholder="Ex: R">
+                    <label data-i18n="sb-label-limit">Limite:</label> <input type="number" id="sb-art-limit" value="2" style="width: 70px;">
                   </div>
-                  <button class="btn btn-primary btn-sm" onclick="runSandboxArticles()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                  <button class="btn btn-primary btn-sm" onclick="runSandboxArticles()"><i class="fa-solid fa-play"></i> <span data-i18n="sb-btn-send">Enviar Requisição</span></button>
                 </div>
                  <div class="sandbox-url-bar">
-                  <strong>URL Requisitada:</strong> <span id="sb-art-url">https://ebbcopendata.vercel.app/api/articles?limit=2</span>
+                  <strong data-i18n="sb-label-url">URL Requisitada:</strong> <span id="sb-art-url">https://ebbcopendata.vercel.app/api/articles?limit=2</span>
                 </div>
                 <div class="sandbox-snippets">
                   <div class="snippet-header">
@@ -501,17 +601,24 @@
                 <span class="badge get large">GET</span>
                 <h2>/api/articles/stats</h2>
               </div>
-              <p class="endpoint-desc">Retorna estatísticas consolidadas e consolidadas agregadas sobre todo o dataset.</p>
               
-              <h3>Simulador Sandbox</h3>
+              <div class="lang-pt-only">
+                <p class="endpoint-desc">Retorna estatísticas consolidadas e consolidadas agregadas sobre todo o dataset.</p>
+                <h3>Simulador Sandbox</h3>
+              </div>
+              <div class="lang-en-only">
+                <p class="endpoint-desc">Returns consolidated and aggregated statistics about the entire dataset.</p>
+                <h3>Sandbox Simulator</h3>
+              </div>
+              
               <div class="sandbox-box">
-                <button class="btn btn-primary btn-sm" onclick="runSandboxStats()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                <button class="btn btn-primary btn-sm" onclick="runSandboxStats()"><i class="fa-solid fa-play"></i> <span data-i18n="sb-btn-send">Enviar Requisição</span></button>
                  <div class="sandbox-url-bar">
-                  <strong>URL Requisitada:</strong> <span id="sb-stats-url">https://ebbcopendata.vercel.app/api/articles/stats</span>
+                  <strong data-i18n="sb-label-url">URL Requisitada:</strong> <span id="sb-stats-url">https://ebbcopendata.vercel.app/api/articles/stats</span>
                 </div>
                 <div class="sandbox-snippets">
                   <div class="snippet-header">
-                    <span>Exemplo de Código:</span>
+                    <span data-i18n="sb-label-snippet">Exemplo de Código:</span>
                     <div class="snippet-tabs" data-endpoint="stats">
                       <button class="snippet-tab active" data-lang="js">JavaScript</button>
                       <button class="snippet-tab" data-lang="python">Python</button>
@@ -521,7 +628,7 @@
                   <pre class="snippet-code-box"><code id="sb-stats-snippet"></code></pre>
                 </div>
                 <div class="sandbox-response">
-                  <pre><code id="sb-stats-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
+                  <pre><code id="sb-stats-resp" data-i18n="sb-resp-placeholder">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
                 </div>
               </div>
             </div>
@@ -532,21 +639,28 @@
                 <span class="badge get large">GET</span>
                 <h2>/api/articles/:doi</h2>
               </div>
-              <p class="endpoint-desc">Retorna os metadados de um único artigo com base no DOI especificado. O parâmetro <code>:doi</code> pode conter a URL completa do DOI ou apenas o seu sufixo.</p>
+              
+              <div class="lang-pt-only">
+                <p class="endpoint-desc">Retorna os metadados de um único artigo com base no DOI especificado. O parâmetro <code>:doi</code> pode conter a URL completa do DOI ou apenas o seu sufixo.</p>
+                <h3>Simulador Sandbox</h3>
+              </div>
+              <div class="lang-en-only">
+                <p class="endpoint-desc">Returns metadata of a single article based on the specified DOI. The <code>:doi</code> parameter can contain the full DOI URL or just its suffix.</p>
+                <h3>Sandbox Simulator</h3>
+              </div>
 
-              <h3>Simulador Sandbox</h3>
               <div class="sandbox-box">
                 <div class="sandbox-controls">
-                  <label>DOI do Artigo:</label> 
+                  <label data-i18n="sb-label-doi">DOI do Artigo:</label> 
                   <input type="text" id="sb-doi-val" value="https://doi.org/10.22477.112" style="width: 300px;">
-                  <button class="btn btn-primary btn-sm" onclick="runSandboxDoi()"><i class="fa-solid fa-play"></i> Enviar Requisição</button>
+                  <button class="btn btn-primary btn-sm" onclick="runSandboxDoi()"><i class="fa-solid fa-play"></i> <span data-i18n="sb-btn-send">Enviar Requisição</span></button>
                 </div>
                  <div class="sandbox-url-bar">
-                  <strong>URL Requisitada:</strong> <span id="sb-doi-url">https://ebbcopendata.vercel.app/api/articles/https://doi.org/10.22477.112</span>
+                  <strong data-i18n="sb-label-url">URL Requisitada:</strong> <span id="sb-doi-url">https://ebbcopendata.vercel.app/api/articles/https://doi.org/10.22477.112</span>
                 </div>
                 <div class="sandbox-snippets">
                   <div class="snippet-header">
-                    <span>Exemplo de Código:</span>
+                    <span data-i18n="sb-label-snippet">Exemplo de Código:</span>
                     <div class="snippet-tabs" data-endpoint="doi">
                       <button class="snippet-tab active" data-lang="js">JavaScript</button>
                       <button class="snippet-tab" data-lang="python">Python</button>
@@ -556,7 +670,7 @@
                   <pre class="snippet-code-box"><code id="sb-doi-snippet"></code></pre>
                 </div>
                 <div class="sandbox-response">
-                  <pre><code id="sb-doi-resp">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
+                  <pre><code id="sb-doi-resp" data-i18n="sb-resp-placeholder">{ "Clique em Enviar Requisição para carregar os dados" }</code></pre>
                 </div>
               </div>
             </div>
@@ -567,31 +681,56 @@
                 <span class="badge get large">GET</span>
                 <h2>/api/articles/export</h2>
               </div>
-              <p class="endpoint-desc">Exporta os artigos filtrados como arquivo JSON ou CSV para download direto.</p>
               
-              <h3>Parâmetros de Consulta (Query Params)</h3>
-              <p>Aceita exatamente os mesmos filtros do endpoint <code>/api/articles</code>, com exceção dos parâmetros de paginação (<code>limit</code> e <code>offset</code>).</p>
-              <table class="params-table">
-                <thead>
-                  <tr>
-                    <th>Parâmetro</th>
-                    <th>Tipo</th>
-                    <th>Descrição</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>format</code></td>
-                    <td>string</td>
-                    <td>Formato do download: <code>json</code> (padrão) ou <code>csv</code>.</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="lang-pt-only">
+                <p class="endpoint-desc">Exporta os artigos filtrados como arquivo JSON ou CSV para download direto.</p>
+                <h3>Parâmetros de Consulta (Query Params)</h3>
+                <p>Aceita exatamente os mesmos filtros do endpoint <code>/api/articles</code>, com exceção dos parâmetros de paginação (<code>limit</code> e <code>offset</code>).</p>
+                <table class="params-table">
+                  <thead>
+                    <tr>
+                      <th>Parâmetro</th>
+                      <th>Tipo</th>
+                      <th>Descrição</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>format</code></td>
+                      <td>string</td>
+                      <td>Formato do download: <code>json</code> (padrão) ou <code>csv</code>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Links de Teste Rápido</h3>
+              </div>
+              
+              <div class="lang-en-only">
+                <p class="endpoint-desc">Exports filtered articles as JSON or CSV files for direct download.</p>
+                <h3>Query Parameters (Query Params)</h3>
+                <p>Accepts exactly the same filters as the <code>/api/articles</code> endpoint, except for pagination parameters (<code>limit</code> and <code>offset</code>).</p>
+                <table class="params-table">
+                  <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>format</code></td>
+                      <td>string</td>
+                      <td>Download format: <code>json</code> (default) or <code>csv</code>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Quick Test Links</h3>
+              </div>
 
-              <h3>Links de Teste Rápido</h3>
               <div class="link-buttons">
-                <a href="/api/articles/export?format=json&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-code"></i> Baixar JSON (EBBC 2024)</a>
-                <a href="/api/articles/export?format=csv&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-csv"></i> Baixar CSV (EBBC 2024)</a>
+                <a href="/api/articles/export?format=json&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-code"></i> <span data-i18n="dl-json">Baixar JSON (EBBC 2024)</span></a>
+                <a href="/api/articles/export?format=csv&year=2024" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-file-csv"></i> <span data-i18n="dl-csv">Baixar CSV (EBBC 2024)</span></a>
               </div>
             </div>
           </div>
@@ -608,7 +747,7 @@
             <i class="fa-solid fa-server"></i>
             <span>EBBC <strong>OpenData</strong></span>
           </div>
-          <p class="footer-tagline">Iniciativa para a promoção da Ciência Aberta em Bibliometria no Brasil.</p>
+          <p class="footer-tagline" data-i18n="footer-tagline">Iniciativa para a promoção da Ciência Aberta em Bibliometria no Brasil.</p>
         </div>
         <div class="footer-links-group">
           <a href="mailto:gabrielngama@gmail.com" class="footer-action-link">
@@ -617,16 +756,16 @@
           </a>
           <a href="http://lattes.cnpq.br/1588167693631178" target="_blank" rel="noopener noreferrer" class="footer-action-link">
             <i class="fa-solid fa-graduation-cap"></i>
-            <span>Currículo Lattes</span>
+            <span data-i18n="footer-lattes">Currículo Lattes</span>
           </a>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-copyright">
-          &copy; 2026 EBBC OpenData &bull; Desenvolvido por Gabriel Gama
+          &copy; 2026 EBBC OpenData &bull; <span data-i18n="footer-copyright">Desenvolvido por Gabriel Gama</span>
         </div>
         <div class="footer-credit">
-          Desenvolvido com <i class="fa-solid fa-heart credit-heart"></i> para a comunidade acadêmica
+          Desenvolvido com <i class="fa-solid fa-heart credit-heart"></i> <span data-i18n="footer-credit">para a comunidade acadêmica</span>
         </div>
       </div>
     </footer>
@@ -645,30 +784,30 @@
       <div class="modal-body-area">
         
         <div class="modal-section">
-          <h4><i class="fa-solid fa-align-left"></i> Resumo (Abstract)</h4>
+          <h4><i class="fa-solid fa-align-left"></i> <span data-i18n="modal-abstract-title">Resumo (Abstract)</span></h4>
           <p id="modal-abstract" class="abstract-text">Resumo não disponível.</p>
         </div>
 
         <div class="modal-meta-grid">
           <div class="meta-column">
-            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas Utilizadas</h4>
+            <h4><i class="fa-solid fa-screwdriver-wrench"></i> <span data-i18n="modal-tools-title">Ferramentas Utilizadas</span></h4>
             <div id="modal-tools" class="badge-list">Nenhuma ferramenta detectada</div>
             
-            <h4 class="mt-4"><i class="fa-solid fa-arrows-split-up-and-left"></i> Etapas Metodológicas de Uso</h4>
+            <h4 class="mt-4"><i class="fa-solid fa-arrows-split-up-and-left"></i> <span data-i18n="modal-stages-title">Etapas Metodológicas de Uso</span></h4>
             <div id="modal-stages" class="badge-list">N/A</div>
           </div>
           
           <div class="meta-column">
-            <h4><i class="fa-solid fa-database"></i> Fontes de Coleta de Dados</h4>
+            <h4><i class="fa-solid fa-database"></i> <span data-i18n="modal-sources-title">Fontes de Coleta de Dados</span></h4>
             <div id="modal-sources" class="badge-list">N/A</div>
 
-            <h4 class="mt-4"><i class="fa-solid fa-tags"></i> Palavras-chave</h4>
+            <h4 class="mt-4"><i class="fa-solid fa-tags"></i> <span data-i18n="modal-keywords-title">Palavras-chave</span></h4>
             <div id="modal-keywords" class="badge-list">Nenhuma palavra-chave</div>
           </div>
         </div>
         
         <div class="modal-footer-area">
-          <span class="doi-label"><i class="fa-solid fa-link"></i> DOI:</span>
+          <span class="doi-label"><i class="fa-solid fa-link"></i> <span data-i18n="modal-doi-label">DOI:</span></span>
           <a href="#" id="modal-doi-link" target="_blank" class="doi-link">https://doi.org/10.xxxx/xxxx</a>
         </div>
       </div>

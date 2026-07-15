@@ -1562,3 +1562,63 @@ select option {
     justify-content: space-between;
   }
 }
+
+/* ==========================================================================
+   LANGUAGE SWITCHER & INTERNATIONAlIZATION (i18n)
+   ========================================================================== */
+
+.landing-lang-wrapper {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 100;
+}
+
+.lang-selector {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 3px;
+  gap: 2px;
+  align-items: center;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* i18n visibility controllers */
+body.lang-pt .lang-en-only {
+  display: none !important;
+}
+
+body.lang-en .lang-pt-only {
+  display: none !important;
+}
+
+@media (max-width: 576px) {
+  .landing-lang-wrapper {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+

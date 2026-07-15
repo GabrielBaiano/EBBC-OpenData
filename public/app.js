@@ -2,7 +2,291 @@
 // EBBC OPENDATA - FRONTEND CONTROLLER
 // ==========================================================================
 
+const TRANSLATIONS = {
+  pt: {
+    pageTitle: "EBBC OpenData - API Pública e Painel de Metadados",
+    "landing-subtitle": "Mapeamento Metodológico e Infraestrutura de Softwares nos Anais do EBBC (2012-2024)",
+    "landing-developed-by": "Desenvolvido por Gabriel Gama",
+    "feat-dash-title": "Painel Cientométrico",
+    "feat-dash-desc": "Estatísticas consolidadas e gráficos sobre a adoção de softwares e fontes de dados na pesquisa brasileira.",
+    "feat-exp-title": "Explorador de Dados",
+    "feat-exp-desc": "Busca de artigos e filtros cruzados por autor, ferramenta utilizada e etapa metodológica.",
+    "feat-api-title": "API Pública & Sandbox",
+    "feat-api-desc": "Endpoints RESTful completos com simulação direta no navegador para pesquisadores e desenvolvedores.",
+    "landing-about": "O <strong>EBBC OpenData</strong> é uma iniciativa dedicada à promoção da <strong>Ciência Aberta</strong>. Utilizando técnicas avançadas de curadoria e extração automatizada de metadados assistida por IA, o projeto visa facilitar o estudo do desenvolvimento científico nacional na área de Bibliometria e Cientometria.",
+    "btn-enter": "Entrar e Usar",
+    "header-subtitle": "API Aberta e Curadoria Metodológica dos Anais",
+    "open-science": "Ciência Aberta",
+    "tab-stats": "Painel de Estatísticas",
+    "tab-explorer": "Explorador de Dados",
+    "tab-docs": "Documentação da API",
+    "stat-total-title": "Total de Artigos",
+    "stat-total-footer": "2012 a 2024",
+    "stat-tools-title": "Adoção de Ferramentas",
+    "stat-tools-footer": "Processados por IA",
+    "stat-sources-title": "Fontes Mapeadas",
+    "stat-sources-footer": "Bancos de dados e portais",
+    "stat-authors-title": "Pesquisadores",
+    "stat-authors-footer": "Autores nos anais",
+    "toolbar-title": "Personalizar Visualização",
+    "toolbar-palette": "Paleta:",
+    "palette-apple": "Apple Minimalist",
+    "palette-mono": "Monocromático Sleek",
+    "palette-neon": "Neon Cyberpunk",
+    "palette-pastel": "Pastel Suave",
+    "toolbar-type": "Tipo de Gráfico:",
+    "type-bar": "Barras / Colunas",
+    "type-line": "Linhas / Conexões",
+    "type-radar": "Radar (Teia)",
+    "chart-years-title": "Publicações por Edição",
+    "chart-tools-title": "Top Softwares & Ferramentas Utilizadas",
+    "chart-sources-title": "Principais Fontes de Coleta de Dados",
+    "chart-stages-title": "Etapas de Uso Metodológico",
+    "filters-title": "Filtros de Busca",
+    "filters-clear": "Limpar",
+    "filters-search-label": "Busca Textual",
+    "filters-search-placeholder": "Título, autor, resumo, palavra-chave...",
+    "filters-editions": "Edições do EBBC",
+    "filters-tool-label": "Filtrar por Ferramenta",
+    "filters-all-tools": "Todas as ferramentas",
+    "filters-source-label": "Fonte de Coleta de Dados",
+    "filters-all-sources": "Todas as fontes",
+    "filters-stage-label": "Etapa Metodológica",
+    "filters-any-stage": "Qualquer etapa",
+    "stage-coleta": "Coleta de Dados",
+    "stage-analise": "Análise de Dados",
+    "stage-visualizacao": "Visualização de Dados",
+    "filters-has-tool": "Apenas artigos que usam ferramentas",
+    "filters-sort-label": "Ordenar por",
+    "sort-title": "Título",
+    "sort-year": "Ano de Edição",
+    "sort-doi": "DOI",
+    "sort-dir-title": "Alternar Ordem",
+    "export-title": "Exportar Resultados",
+    "docs-sidebar-title": "Endpoints",
+    "docs-link-intro": "Introdução",
+    "sb-label-search": "Busca:",
+    "sb-label-year": "Ano:",
+    "sb-label-tool": "Ferramenta:",
+    "sb-label-limit": "Limite:",
+    "sb-btn-send": "Enviar Requisição",
+    "sb-label-url": "URL Requisitada:",
+    "sb-label-snippet": "Exemplo de Código:",
+    "sb-placeholder-search": "Ex: cientometria",
+    "sb-placeholder-year": "Ex: 2024",
+    "sb-placeholder-tool": "Ex: R",
+    "sb-label-doi": "DOI do Artigo:",
+    "dl-json": "Baixar JSON (EBBC 2024)",
+    "dl-csv": "Baixar CSV (EBBC 2024)",
+    "footer-tagline": "Iniciativa para a promoção da Ciência Aberta em Bibliometria no Brasil.",
+    "footer-lattes": "Currículo Lattes",
+    "footer-copyright": "Desenvolvido por Gabriel Gama",
+    "footer-credit": "para a comunidade acadêmica",
+    "modal-abstract-title": "Resumo (Abstract)",
+    "modal-tools-title": "Ferramentas Utilizadas",
+    "modal-stages-title": "Etapas Metodológicas de Uso",
+    "modal-sources-title": "Fontes de Coleta de Dados",
+    "modal-keywords-title": "Palavras-chave",
+    "modal-doi-label": "DOI:",
+    // Dynamic messages:
+    loadingArticles: "Carregando dados do servidor...",
+    noArticlesFound: "Nenhum artigo encontrado com os filtros selecionados.",
+    loadError: "Ocorreu um erro ao carregar os dados. Verifique a conexão com a API.",
+    toolUsageCountPattern: "{count} artigos utilizaram softwares",
+    emptyAbstract: "Resumo deste artigo não foi indexado no cache do OJS/DOI.",
+    emptyTools: "Nenhuma ferramenta detectada",
+    emptySources: "N/A",
+    emptyStages: "N/A",
+    emptyKeywords: "Nenhuma palavra-chave",
+    sbRespPlaceholder: '{ "Clique em Enviar Requisição para carregar os dados" }',
+    sbRespLoading: "Carregando dados...",
+    sbRespLoadingStats: "Carregando estatísticas...",
+    sbRespLoadingDoi: "Buscando detalhes do artigo...",
+    chartPublicationsLabel: "Artigos nos Anais",
+    chartFrequencyLabel: "Frequência de Uso",
+    chartArticlesLabel: "Artigos",
+    coletaLabel: "Coleta de dados",
+    analiseLabel: "Análise dos dados",
+    visualizacaoLabel: "Visualização"
+  },
+  en: {
+    pageTitle: "EBBC OpenData - Public API and Metadata Dashboard",
+    "landing-subtitle": "Methodological Mapping and Software Infrastructure in EBBC Proceedings (2012-2024)",
+    "landing-developed-by": "Developed by Gabriel Gama",
+    "feat-dash-title": "Scientometric Dashboard",
+    "feat-dash-desc": "Consolidated statistics and charts on software adoption and data sources in Brazilian research.",
+    "feat-exp-title": "Data Explorer",
+    "feat-exp-desc": "Search articles and cross-filter by author, tool utilized, and methodological stage.",
+    "feat-api-title": "Public API & Sandbox",
+    "feat-api-desc": "Complete RESTful endpoints with browser simulation for researchers and developers.",
+    "landing-about": "<strong>EBBC OpenData</strong> is an initiative dedicated to the promotion of <strong>Open Science</strong>. Using advanced AI-assisted curation and automated metadata extraction, the project aims to facilitate the study of national scientific development in the field of Bibliometrics and Scientometrics.",
+    "btn-enter": "Enter and Use",
+    "header-subtitle": "Open API and Methodological Curation of the Proceedings",
+    "open-science": "Open Science",
+    "tab-stats": "Statistics Dashboard",
+    "tab-explorer": "Data Explorer",
+    "tab-docs": "API Documentation",
+    "stat-total-title": "Total Articles",
+    "stat-total-footer": "2012 to 2024",
+    "stat-tools-title": "Software Adoption",
+    "stat-tools-footer": "Processed by AI",
+    "stat-sources-title": "Mapped Sources",
+    "stat-sources-footer": "Databases and portals",
+    "stat-authors-title": "Researchers",
+    "stat-authors-footer": "Authors in proceedings",
+    "toolbar-title": "Customize Visualization",
+    "toolbar-palette": "Palette:",
+    "palette-apple": "Apple Minimalist",
+    "palette-mono": "Sleek Monochrome",
+    "palette-neon": "Neon Cyberpunk",
+    "palette-pastel": "Soft Pastel",
+    "toolbar-type": "Chart Type:",
+    "type-bar": "Bars / Columns",
+    "type-line": "Lines / Connections",
+    "type-radar": "Radar (Web)",
+    "chart-years-title": "Publications by Edition",
+    "chart-tools-title": "Top Software & Tools Used",
+    "chart-sources-title": "Main Data Collection Sources",
+    "chart-stages-title": "Methodological Usage Stages",
+    "filters-title": "Search Filters",
+    "filters-clear": "Clear",
+    "filters-search-label": "Text Search",
+    "filters-search-placeholder": "Title, author, abstract, keyword...",
+    "filters-editions": "EBBC Editions",
+    "filters-tool-label": "Filter by Tool",
+    "filters-all-tools": "All tools",
+    "filters-source-label": "Data Collection Source",
+    "filters-all-sources": "All sources",
+    "filters-stage-label": "Methodological Stage",
+    "filters-any-stage": "Any stage",
+    "stage-coleta": "Data Collection",
+    "stage-analise": "Data Analysis",
+    "stage-visualizacao": "Data Visualization",
+    "filters-has-tool": "Only articles using tools",
+    "filters-sort-label": "Sort by",
+    "sort-title": "Title",
+    "sort-year": "Edition Year",
+    "sort-doi": "DOI",
+    "sort-dir-title": "Toggle Order",
+    "export-title": "Export Results",
+    "docs-sidebar-title": "Endpoints",
+    "docs-link-intro": "Introduction",
+    "sb-label-search": "Search:",
+    "sb-label-year": "Year:",
+    "sb-label-tool": "Tool:",
+    "sb-label-limit": "Limit:",
+    "sb-btn-send": "Send Request",
+    "sb-label-url": "Requested URL:",
+    "sb-label-snippet": "Code Example:",
+    "sb-placeholder-search": "E.g. scientometrics",
+    "sb-placeholder-year": "E.g. 2024",
+    "sb-placeholder-tool": "E.g. R",
+    "sb-label-doi": "Article DOI:",
+    "dl-json": "Download JSON (EBBC 2024)",
+    "dl-csv": "Download CSV (EBBC 2024)",
+    "footer-tagline": "Initiative for the promotion of Open Science in Bibliometrics in Brazil.",
+    "footer-lattes": "Lattes Curriculum",
+    "footer-copyright": "Developed by Gabriel Gama",
+    "footer-credit": "for the academic community",
+    "modal-abstract-title": "Abstract",
+    "modal-tools-title": "Software Tools Used",
+    "modal-stages-title": "Methodological Usage Stages",
+    "modal-sources-title": "Data Collection Sources",
+    "modal-keywords-title": "Keywords",
+    "modal-doi-label": "DOI:",
+    // Dynamic messages:
+    loadingArticles: "Loading data from server...",
+    noArticlesFound: "No articles found with the selected filters.",
+    loadError: "An error occurred while loading data. Verify connection to the API.",
+    toolUsageCountPattern: "{count} articles used software",
+    emptyAbstract: "Abstract for this article is not indexed in the OJS/DOI cache.",
+    emptyTools: "No tools detected",
+    emptySources: "N/A",
+    emptyStages: "N/A",
+    emptyKeywords: "No keywords",
+    sbRespPlaceholder: '{ "Click Send Request to load data" }',
+    sbRespLoading: "Loading data...",
+    sbRespLoadingStats: "Loading statistics...",
+    sbRespLoadingDoi: "Fetching article details...",
+    chartPublicationsLabel: "Articles in Proceedings",
+    chartFrequencyLabel: "Frequency of Use",
+    chartArticlesLabel: "Articles",
+    coletaLabel: "Data collection",
+    analiseLabel: "Data analysis",
+    visualizacaoLabel: "Visualization"
+  }
+};
+
+let currentLang = localStorage.getItem('ebbc_lang') || 'pt';
+
+function initLanguage() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const selectedLang = btn.getAttribute('data-lang');
+      applyLanguage(selectedLang);
+    });
+  });
+  applyLanguage(currentLang);
+}
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('ebbc_lang', lang);
+  document.body.className = `lang-${lang}`;
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  
+  document.title = TRANSLATIONS[lang].pageTitle;
+  
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (TRANSLATIONS[lang][key]) {
+      if (key === 'landing-about') {
+        el.innerHTML = TRANSLATIONS[lang][key];
+      } else {
+        el.textContent = TRANSLATIONS[lang][key];
+      }
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (TRANSLATIONS[lang][key]) {
+      el.placeholder = TRANSLATIONS[lang][key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (TRANSLATIONS[lang][key]) {
+      el.title = TRANSLATIONS[lang][key];
+    }
+  });
+  
+  const sandboxPlaceholders = document.querySelectorAll('[data-i18n="sb-resp-placeholder"]');
+  sandboxPlaceholders.forEach(el => {
+    if (el.textContent.includes('{') || el.textContent.includes('Clique') || el.textContent.includes('Click')) {
+      el.textContent = TRANSLATIONS[lang].sbRespPlaceholder;
+    }
+  });
+
+  if (statsData) {
+    updateStatsUI();
+  }
+  if (articlesData.length > 0) {
+    updateArticlesUI();
+  }
+}
+
 // State Variables
+let totalFilteredCount = 0;
 let currentFilters = {
   search: '',
   years: ['2012', '2014', '2016', '2018', '2020', '2022', '2024'],
@@ -23,6 +307,7 @@ let currentChartType = 'bar';
 
 // On Load Initialization
 document.addEventListener('DOMContentLoaded', () => {
+  initLanguage();
   initTabs();
   fetchStats();
   fetchArticles();
@@ -93,33 +378,42 @@ async function fetchStats() {
     if (!res.ok) throw new Error('Falha ao buscar estatísticas');
     statsData = await res.json();
     
-    // Update metric cards
-    const totalEl = document.getElementById('stat-total-articles');
-    if (totalEl) totalEl.textContent = statsData.totalArticles;
-    
-    const pctEl = document.getElementById('stat-tool-percentage');
-    if (pctEl) pctEl.textContent = `${statsData.toolUsagePercentage}%`;
-    
-    const countEl = document.getElementById('stat-tool-count');
-    if (countEl) countEl.textContent = `${statsData.toolUsageCount} artigos utilizaram softwares`;
-    
-    const toolsEl = document.getElementById('stat-unique-tools');
-    if (toolsEl) toolsEl.textContent = statsData.topTools.length + '+';
-    
-    const sourcesEl = document.getElementById('stat-unique-sources');
-    if (sourcesEl) sourcesEl.textContent = statsData.topSources.length + '+';
-    
-    const authorsEl = document.getElementById('stat-unique-authors');
-    if (authorsEl) authorsEl.textContent = Object.keys(statsData.topAuthors || {}).length || '-';
-    
-    // Populate select boxes in sidebar
-    populateFilterSelects(statsData);
-    
-    // Render Charts
-    renderCharts(statsData);
+    updateStatsUI();
   } catch (error) {
     console.error('Error fetching statistics:', error);
   }
+}
+
+function updateStatsUI() {
+  if (!statsData) return;
+  
+  // Update metric cards
+  const totalEl = document.getElementById('stat-total-articles');
+  if (totalEl) totalEl.textContent = statsData.totalArticles;
+  
+  const pctEl = document.getElementById('stat-tool-percentage');
+  if (pctEl) pctEl.textContent = `${statsData.toolUsagePercentage}%`;
+  
+  const countEl = document.getElementById('stat-tool-count');
+  if (countEl) {
+    const pattern = TRANSLATIONS[currentLang].toolUsageCountPattern;
+    countEl.textContent = pattern.replace('{count}', statsData.toolUsageCount);
+  }
+  
+  const toolsEl = document.getElementById('stat-unique-tools');
+  if (toolsEl) toolsEl.textContent = statsData.topTools.length + '+';
+  
+  const sourcesEl = document.getElementById('stat-unique-sources');
+  if (sourcesEl) sourcesEl.textContent = statsData.topSources.length + '+';
+  
+  const authorsEl = document.getElementById('stat-unique-authors');
+  if (authorsEl) authorsEl.textContent = Object.keys(statsData.topAuthors || {}).length || '-';
+  
+  // Populate select boxes in sidebar
+  populateFilterSelects(statsData);
+  
+  // Render Charts
+  renderCharts(statsData);
 }
 
 function populateFilterSelects(stats) {
@@ -127,8 +421,8 @@ function populateFilterSelects(stats) {
   const sourceSelect = document.getElementById('filter-source');
   
   // Clear other than first option
-  toolSelect.innerHTML = '<option value="">Todas as ferramentas</option>';
-  sourceSelect.innerHTML = '<option value="">Todas as fontes</option>';
+  toolSelect.innerHTML = `<option value="">${TRANSLATIONS[currentLang]['filters-all-tools']}</option>`;
+  sourceSelect.innerHTML = `<option value="">${TRANSLATIONS[currentLang]['filters-all-sources']}</option>`;
   
   // Populate Tools
   stats.topTools.forEach(t => {
@@ -227,7 +521,7 @@ function renderCharts(stats) {
     data: {
       labels: Object.keys(stats.byYear),
       datasets: [{
-        label: 'Artigos nos Anais',
+        label: TRANSLATIONS[currentLang].chartPublicationsLabel,
         data: Object.values(stats.byYear),
         backgroundColor: isLine ? 'rgba(10, 132, 255, 0.15)' : colorCycle.slice(0, Object.keys(stats.byYear).length),
         borderColor: isLine ? '#0a84ff' : borderCycle.slice(0, Object.keys(stats.byYear).length),
@@ -272,7 +566,7 @@ function renderCharts(stats) {
     data: {
       labels: topToolsData.map(t => t.name),
       datasets: [{
-        label: 'Frequência de Uso',
+        label: TRANSLATIONS[currentLang].chartFrequencyLabel,
         data: topToolsData.map(t => t.count),
         backgroundColor: isLine ? 'rgba(48, 209, 88, 0.15)' : colorCycle.slice(0, topToolsData.length),
         borderColor: isLine ? '#30d158' : borderCycle.slice(0, topToolsData.length),
@@ -323,7 +617,7 @@ function renderCharts(stats) {
     data: {
       labels: topSourcesData.map(s => s.name),
       datasets: [{
-        label: 'Artigos',
+        label: TRANSLATIONS[currentLang].chartArticlesLabel,
         data: topSourcesData.map(s => s.count),
         backgroundColor: isLine ? 'rgba(94, 92, 230, 0.15)' : colorCycle.slice(3, 3 + topSourcesData.length),
         borderColor: isLine ? '#5e5ce6' : borderCycle.slice(3, 3 + topSourcesData.length),
@@ -364,7 +658,13 @@ function renderCharts(stats) {
   charts.stages = new Chart(ctxStages, {
     type: stagesType,
     data: {
-      labels: Object.keys(stats.usageStages).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
+      labels: Object.keys(stats.usageStages).map(s => {
+        const sLower = s.toLowerCase();
+        if (sLower.includes('coleta')) return TRANSLATIONS[currentLang].coletaLabel;
+        if (sLower.includes('análise') || sLower.includes('analise')) return TRANSLATIONS[currentLang].analiseLabel;
+        if (sLower.includes('visualização') || sLower.includes('visualizacao')) return TRANSLATIONS[currentLang].visualizacaoLabel;
+        return s;
+      }),
       datasets: [{
         data: Object.values(stats.usageStages),
         backgroundColor: currentChartTheme === 'monochrome' ? [
@@ -440,7 +740,7 @@ async function fetchArticles() {
   const container = document.getElementById('articles-list-element');
   container.innerHTML = `
     <div class="loading-state">
-      <i class="fa-solid fa-circle-notch fa-spin"></i> Carregando dados do servidor...
+      <i class="fa-solid fa-circle-notch fa-spin"></i> ${TRANSLATIONS[currentLang].loadingArticles}
     </div>
   `;
   
@@ -464,19 +764,9 @@ async function fetchArticles() {
     
     const data = await res.json();
     articlesData = data.results;
+    totalFilteredCount = data.filteredCount;
     
-    // Update counts
-    document.getElementById('filtered-count').textContent = data.filteredCount;
-    
-    const startIdx = totalCount => totalCount === 0 ? 0 : currentFilters.offset + 1;
-    const endIdx = totalCount => Math.min(currentFilters.offset + currentFilters.limit, totalCount);
-    document.getElementById('displayed-count').textContent = `${startIdx(data.filteredCount)}-${endIdx(data.filteredCount)}`;
-    
-    // Render list
-    renderArticlesList(articlesData);
-    
-    // Render pagination controls
-    renderPagination(data.filteredCount);
+    updateArticlesUI();
     
     // Update API Sandbox URL dynamically
     updateSandboxUrls();
@@ -485,10 +775,27 @@ async function fetchArticles() {
     container.innerHTML = `
       <div class="empty-state">
         <i class="fa-solid fa-circle-exclamation" style="color: var(--color-rose);"></i>
-        <p>Ocorreu um erro ao carregar os dados. Verifique a conexão com a API.</p>
+        <p>${TRANSLATIONS[currentLang].loadError}</p>
       </div>
     `;
   }
+}
+
+function updateArticlesUI() {
+  const startIdx = totalFilteredCount === 0 ? 0 : currentFilters.offset + 1;
+  const endIdx = Math.min(currentFilters.offset + currentFilters.limit, totalFilteredCount);
+  
+  const displayedStr = `${startIdx}-${endIdx}`;
+  const countContainer = document.querySelector('.results-count');
+  
+  if (currentLang === 'en') {
+    countContainer.innerHTML = `Showing <span id="displayed-count">${displayedStr}</span> of <span id="filtered-count">${totalFilteredCount}</span> filtered articles`;
+  } else {
+    countContainer.innerHTML = `Mostrando <span id="displayed-count">${displayedStr}</span> de <span id="filtered-count">${totalFilteredCount}</span> artigos filtrados`;
+  }
+  
+  renderArticlesList(articlesData);
+  renderPagination(totalFilteredCount);
 }
 
 function renderArticlesList(list) {
@@ -499,7 +806,7 @@ function renderArticlesList(list) {
     container.innerHTML = `
       <div class="empty-state">
         <i class="fa-solid fa-folder-open"></i>
-        <p>Nenhum artigo encontrado com os filtros selecionados.</p>
+        <p>${TRANSLATIONS[currentLang].noArticlesFound}</p>
       </div>
     `;
     return;
@@ -522,10 +829,18 @@ function renderArticlesList(list) {
     });
     
     art.usage_stages.slice(0, 2).forEach(st => {
-      tagsHTML += `<span class="badge-tag stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> ${st}</span>`;
+      // Translate dynamic stage tags if they correspond to known stages
+      let displayStage = st;
+      const stLower = st.toLowerCase();
+      if (stLower.includes('coleta')) displayStage = currentLang === 'en' ? 'Data collection' : 'Coleta de dados';
+      else if (stLower.includes('análise') || stLower.includes('analise')) displayStage = currentLang === 'en' ? 'Data analysis' : 'Análise de dados';
+      else if (stLower.includes('visualização') || stLower.includes('visualizacao')) displayStage = currentLang === 'en' ? 'Visualization' : 'Visualização';
+      
+      tagsHTML += `<span class="badge-tag stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> ${displayStage}</span>`;
     });
 
-    const doiSnippet = art.doi ? `<span class="card-doi">${art.doi}</span>` : '<span class="card-doi">Sem DOI cadastrado</span>';
+    const noDoiText = currentLang === 'en' ? 'No DOI registered' : 'Sem DOI cadastrado';
+    const doiSnippet = art.doi ? `<span class="card-doi">${art.doi}</span>` : `<span class="card-doi">${noDoiText}</span>`;
     
     card.innerHTML = `
       <div class="card-header-row">
@@ -549,7 +864,11 @@ function renderPagination(totalFiltered) {
   const totalPages = Math.ceil(totalFiltered / currentFilters.limit) || 1;
   const currentPage = Math.floor(currentFilters.offset / currentFilters.limit) + 1;
   
-  indicator.textContent = `Pág. ${currentPage} de ${totalPages}`;
+  if (currentLang === 'en') {
+    indicator.textContent = `Page ${currentPage} of ${totalPages}`;
+  } else {
+    indicator.textContent = `Pág. ${currentPage} de ${totalPages}`;
+  }
   
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
@@ -723,13 +1042,13 @@ function openArticleModal(art) {
   document.getElementById('modal-year').textContent = art.year;
   document.getElementById('modal-title').textContent = art.title;
   document.getElementById('modal-authors').textContent = art.authors.join(', ');
-  document.getElementById('modal-abstract').textContent = art.abstract || 'Resumo deste artigo não foi indexado no cache do OJS/DOI.';
+  document.getElementById('modal-abstract').textContent = art.abstract || TRANSLATIONS[currentLang].emptyAbstract;
   
   // Tools List
   const toolsList = document.getElementById('modal-tools');
   toolsList.innerHTML = '';
   if (art.tools.length === 0) {
-    toolsList.innerHTML = '<span class="text-muted" style="font-size: 0.85rem;">Nenhuma ferramenta detectada</span>';
+    toolsList.innerHTML = `<span class="text-muted" style="font-size: 0.85rem;">${TRANSLATIONS[currentLang].emptyTools}</span>`;
   } else {
     art.tools.forEach(t => {
       toolsList.innerHTML += `<span class="badge-tag tool"><i class="fa-solid fa-screwdriver-wrench"></i> ${t}</span>`;
@@ -740,7 +1059,7 @@ function openArticleModal(art) {
   const sourcesList = document.getElementById('modal-sources');
   sourcesList.innerHTML = '';
   if (art.data_sources.length === 0) {
-    sourcesList.innerHTML = '<span class="text-muted" style="font-size: 0.85rem;">N/A</span>';
+    sourcesList.innerHTML = `<span class="text-muted" style="font-size: 0.85rem;">${TRANSLATIONS[currentLang].emptySources}</span>`;
   } else {
     art.data_sources.forEach(s => {
       sourcesList.innerHTML += `<span class="badge-tag source"><i class="fa-solid fa-database"></i> ${s}</span>`;
@@ -751,10 +1070,17 @@ function openArticleModal(art) {
   const stagesList = document.getElementById('modal-stages');
   stagesList.innerHTML = '';
   if (art.usage_stages.length === 0) {
-    stagesList.innerHTML = '<span class="text-muted" style="font-size: 0.85rem;">N/A</span>';
+    stagesList.innerHTML = `<span class="text-muted" style="font-size: 0.85rem;">${TRANSLATIONS[currentLang].emptyStages}</span>`;
   } else {
     art.usage_stages.forEach(st => {
-      stagesList.innerHTML += `<span class="badge-tag stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> ${st}</span>`;
+      // Translate stage string in modal
+      let displayStage = st;
+      const stLower = st.toLowerCase();
+      if (stLower.includes('coleta')) displayStage = currentLang === 'en' ? 'Data collection' : 'Coleta de dados';
+      else if (stLower.includes('análise') || stLower.includes('analise')) displayStage = currentLang === 'en' ? 'Data analysis' : 'Análise de dados';
+      else if (stLower.includes('visualização') || stLower.includes('visualizacao')) displayStage = currentLang === 'en' ? 'Visualization' : 'Visualização';
+      
+      stagesList.innerHTML += `<span class="badge-tag stage"><i class="fa-solid fa-arrows-split-up-and-left"></i> ${displayStage}</span>`;
     });
   }
   
@@ -762,7 +1088,7 @@ function openArticleModal(art) {
   const keywordsList = document.getElementById('modal-keywords');
   keywordsList.innerHTML = '';
   if (art.keywords.length === 0) {
-    keywordsList.innerHTML = '<span class="text-muted" style="font-size: 0.85rem;">Nenhuma palavra-chave</span>';
+    keywordsList.innerHTML = `<span class="text-muted" style="font-size: 0.85rem;">${TRANSLATIONS[currentLang].emptyKeywords}</span>`;
   } else {
     art.keywords.forEach(k => {
       keywordsList.innerHTML += `<span class="badge-pill" style="font-size: 0.75rem;">${k}</span>`;
@@ -827,7 +1153,7 @@ async function runSandboxArticles() {
   document.getElementById('sb-art-url').textContent = window.location.origin + queryUrl;
   
   const codeBox = document.getElementById('sb-art-resp');
-  codeBox.textContent = 'Carregando dados...';
+  codeBox.textContent = TRANSLATIONS[currentLang].sbRespLoading;
   
   try {
     const res = await fetch(queryUrl);
@@ -843,7 +1169,7 @@ async function runSandboxStats() {
   document.getElementById('sb-stats-url').textContent = window.location.origin + queryUrl;
   
   const codeBox = document.getElementById('sb-stats-resp');
-  codeBox.textContent = 'Carregando estatísticas...';
+  codeBox.textContent = TRANSLATIONS[currentLang].sbRespLoadingStats;
   
   try {
     const res = await fetch(queryUrl);
@@ -860,7 +1186,7 @@ async function runSandboxDoi() {
   document.getElementById('sb-doi-url').textContent = window.location.origin + queryUrl;
   
   const codeBox = document.getElementById('sb-doi-resp');
-  codeBox.textContent = 'Buscando detalhes do artigo...';
+  codeBox.textContent = TRANSLATIONS[currentLang].sbRespLoadingDoi;
   
   try {
     const res = await fetch(queryUrl);
