@@ -4,6 +4,9 @@
   <b>🇧🇷 Português</b> | <a href="README.en.md">🇺🇸 English</a>
 </div>
 
+> [!IMPORTANT]
+> **Repositório arquivado**: O desenvolvimento deste projeto foi migrado e continua na organização BRAN em [BRAN-Org/ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database).
+
 [![DOI](https://zenodo.org/badge/1271350784.svg)](https://doi.org/10.5281/zenodo.20722055)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-darkgreen?logo=github)](https://github.com/GabrielBaiano/EBBC-OpenData)
 
